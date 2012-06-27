@@ -1,0 +1,62 @@
+---
+layout: default
+title: Germán Escobar
+---
+
+<div class="container">
+	<div class="row">
+		<div class="span8 offset4" style="padding-top: 50px;">
+			<section>
+				<header>Programming</header>
+				<ul>
+					<li><a href="http://www.germanescobar.net/2012/05/jogger-design-decisions-faq.html">Jogger Design Decisions FAQ</a></li>
+					<li><a href="http://www.germanescobar.net/2012/05/java-web-development-back-to-basics.html">Java Web Development: Back to Basics</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<header>Open Source Projects</header>
+				<ul>
+					<li><a href="https://github.com/germanescobar/jogger">Jogger</a>: a Java Web Framework</li>
+					<li><a href="https://github.com/germanescobar/mokai">Mokai</a>: A Java Messaging Gateway</li>
+					<li><a href="https://github.com/germanescobar/smpp-server">SMPP Server</a></li>
+					<li><a href="https://github.com/germanescobar/http-server">HTTP Server</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<header>Companies / Empresas</header>
+				<ul>
+					<li><a href="http://www.elibom.com/">elibom.com</a>: co-founder</li>
+					<li><a href="http://www.infinanza.com/">infinanza.com</a>: founder</li>
+				</ul>
+			</section>
+
+			<section>
+				<header>Emprendimiento</header>
+				<ul>
+					<li><a href="http://gaesva.blogspot.com/2012/05/la-idea-para-su-proxima-startup.html">La Idea de su Próxima Startup</a></li>
+					<li><a href="http://gaesva.blogspot.com/2012/05/el-silicon-valley-dream.html">El Silicon Valley Dream</a></li>
+					<li><a href="http://gaesva.blogspot.com/2011/02/la-ventaja-de-ser-programador.html">La Ventaja de Ser Programador</a></li>
+					<li><a href="http://gaesva.blogspot.com/2011/01/el-sentido-de-crear-empresa.html">¿Por qué crear Empresa?</a></li>
+				</ul>
+			</section>
+
+			<section>
+				<header>Estilo de Vida</header>
+				<ul>
+					<li><a href="http://gaesva.blogspot.com/2012/06/como-tener-siempre-la-razon.html">¿Cómo tener siempre la razón?</a></li>
+					<li><a href="http://gaesva.blogspot.com/2012/01/no-la-tauromaquia.html">¡No a la Tauromaquia!</a></li>
+					<li><a href="http://gaesva.blogspot.com/2011/12/yo-soy-nada.html">Yo Soy Nada</a></li>
+					<li><a href="http://gaesva.blogspot.com/2011/12/no-al-colegio.html">¡No al Colegio!</a></li>
+
+				</ul>
+			</section>
+
+		</div>
+
+		<div id="about" class="span3" style="position: fixed; top: 50px; font-size: 13px; text-align:right;">
+			<p>My name is <strong>Germán Escobar</strong><br>I'm a <strong>Programmer</strong></p>
+		</div>
+	</div>
+</div>

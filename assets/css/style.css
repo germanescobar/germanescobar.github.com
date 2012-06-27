@@ -1,0 +1,46 @@
+body {
+	background: #fefefe url('../images/noise-texture.png') repeat;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.5em;
+	color: #444;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Yanone Kaffeesatz", Helvetica, Tahoma, sans-serif;
+	font-weight: bold;
+	text-shadow: 0px 1px 1px white;
+}
+
+h1 {
+	font-size: 40px;
+	margin-bottom: 14px;
+}
+
+ul li {
+	padding-bottom: 5px;
+}
+
+p {
+	margin: 0 0 20px 0;
+	color: #666;
+	text-shadow: 0px 1px 1px white;
+}
+
+#about strong {
+	color:black;
+}
+
+section {
+	float:left;
+	width:250px;
+	padding: 0 20px 40px 20px;
+}
+
+section header {
+	font-family: "Yanone Kaffeesatz", Helvetica, Tahoma, sans-serif;
+	font-weight: bold;
+	font-size: 32px;
+	line-height: 1em;
+	margin-bottom: 20px;
+}
