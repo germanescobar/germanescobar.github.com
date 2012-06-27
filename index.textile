@@ -57,6 +57,12 @@ title: Germán Escobar
 
 		<div id="about" class="span3" style="position: fixed; top: 50px; font-size: 13px; text-align:right;">
 			<p>My name is <strong>Germán Escobar</strong><br>I'm a <strong>Programmer</strong></p>
+
+			<ul class="images">
+				<li class="first"><a href="http://www.twitter.com/germanescobar" target="_blank"><img src="/assets/images/twitter.png"></a></li>
+				<li><a href="https://www.github.com/germanescobar" target="_blank"><img src="/assets/images/github.png"></a></li>
+			</ul>
+
 		</div>
 	</div>
 </div>

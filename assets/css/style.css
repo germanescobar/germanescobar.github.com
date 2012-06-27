@@ -21,6 +21,24 @@ ul li {
 	padding-bottom: 5px;
 }
 
+ul.images {
+	display: inline-block;
+	text-align: right;
+}
+
+ul.images li {
+	list-style-type: none;
+	float:left;
+}
+
+ul.images li.first {
+	padding-right: 10px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
 p {
 	margin: 0 0 20px 0;
 	color: #666;
