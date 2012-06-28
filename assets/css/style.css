@@ -79,7 +79,6 @@ blockquote p {
 }
 
 #content {
-	margin-left: 340px;
 	padding-top: 50px;
 }
 
@@ -112,8 +111,19 @@ section ul li {
 	padding-bottom: 5px;
 }
 
+/* Landscape phone to portrait tablet */
+ @media (max-width: 767px) {
+ 	#about {
+ 		padding: 20px 20px 0 0;
+ 		display:block;
+ 		position: inherit;
+ 	}
+
+ 	
+ }
+
 /* Landscape phones and down */
- @media (max-width: 480px) {
+@media (max-width: 480px) {
  	h1 {
  		font-size: 34px;
  	}
