@@ -31,7 +31,7 @@ title: Germán Escobar
 	<header>Companies / Empresas</header>
 	<ul>
 		<li><a href="http://www.elibom.com/">elibom.com</a>: co-founder</li>
-		<li><a href="http://www.infinanza.com/">infinanza.com</a>: founder</li>
+		<li><a href="http://www.infinanza.com/">infinanza.com</a>: still an experiment</li>
 	</ul>
 </section>
 
