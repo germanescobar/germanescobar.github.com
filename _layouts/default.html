@@ -23,8 +23,23 @@
 
 	<body>
 
-		<div class="content">
-			{{ content }}
+		<div>
+			<div class="container">
+				<div class="row">
+					<div id="about" class="span3">
+						<p>My name is <strong>Germán Escobar</strong><br> and I'm a <strong>Programmer</strong></p>
+
+						<ul class="images">
+							<li class="first"><a href="http://www.twitter.com/germanescobar" target="_blank"><img src="/assets/images/twitter.png"></a></li>
+							<li><a href="https://www.github.com/germanescobar" target="_blank"><img src="/assets/images/github.png"></a></li>
+						</ul>
+
+					</div>
+					<div id="content" class="span8 offset4">
+						{{ content }}
+					</div>
+				</div>
+			</div>
 		</div>
 
 	</body>
