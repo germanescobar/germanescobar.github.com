@@ -1,0 +1,29 @@
+---
+layout: post
+title: Java web development - back to basics
+permalink: /2012/05/java-web-development-back-to-basics.html
+---
+
+h1. Java web development: back to basics
+
+The first post that I wrote on this blog is titled "AJAX: JQuery, Google Web Toolkit or RichFaces":http://www.germanescobar.net/2009/10/ajax-jquery-google-web-toolkit-or.html. There, I praise RichFaces for being built on top of JSF (Java Server Faces):
+
+bq. "If you haven't work with JSF, I really suggest you do as it is one of the most powerful, easy to learn Web technologies, very similar to swing with heavy use of components and events. It also has a really good support for managing the state in the server using plain Java objects (POJO’s)"
+
+What has happened since? Well, after working with "Wicket":http://wicket.apache.org/ and "Vaadin":http://vaadin.com/ (which I still use in one of "my open source projects":https://github.com/germanescobar/mokai), *I have drifted away from component based web development*.
+
+The reason is simple. It doesn't have to do with performance, number of components or the size of the community. It's just that *component based web frameworks couldn't keep the promise of isolating the programmer from client side development and the request/response nature of HTTP*.
+
+h2. A leaky abstraction
+
+Yes, I know. "Every abstraction, to some degree, is leaky":http://www.joelonsoftware.com/articles/LeakyAbstractions.html. However, the problem with this specific abstraction is that it leaks way too fast. You end up investing large amounts of time understanding how the framework works underneath and how to tweak it in order to achieve what you want. It's a real pain in the ass. The productivity that they promise in their "build an app in 10 minutes or less videos" is dead in the eleventh minute or so.
+
+The other problem is that the technology underneath is moving too fast. HTML5 introduced a lot of new features such as web sockets, canvas and new data storage options. Web development is also moving towards stateless REST services and heavy clients. The future is not clear yet, though.
+
+h2. Back to basics
+
+Lately, I have been working with "Ruby on Rails":http://rubyonrails.org/ and "Express.js":http://expressjs.com/ ("Node.js":http://nodejs.org/). I think that their success lies in the fact that they embraced the request/response nature of HTTP. However, I don't buy the _"Ruby made programming fun again"_ bullshit - a topic for another post -. I still like Java. 
+
+I also tried "Play! Framework":http://www.playframework.org/ for a few weeks. It's an interesting option but I don't think that the solution is to copy exactly how Ruby on Rails works in Java/Scala. It's not really about productivity, it's about maintainability.
+
+So, I'm actually using a "super simple Java request/response based framework I made":https://github.com/germanescobar/jogger, HTML5, CSS3, Javascript and JQuery.

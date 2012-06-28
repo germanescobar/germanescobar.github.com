@@ -4,4 +4,46 @@ title: Jogger design decisions FAQ
 permalink: /2012/05/jogger-design-decisions-faq.html
 ---
 
-Jogger is a lightweight library for building Web Applications that provides a routing mechanism and a view template engine based on FreeMarker. The source and documentation are on Github.
+h1. Jogger design decisions FAQ
+
+Jogger is a lightweight library for building Web Applications that provides a routing mechanism and a view template engine based on "FreeMarker":http://freemarker.sourceforge.net/. The source and documentation are on "Github":https://github.com/germanescobar/jogger.
+
+In this post, however, I would like to help you understand the philosophy behind Jogger by answering some questions about the design.
+
+h2. Why do we need another Java Web Framework?
+
+I wanted a super simple Java web framework that would allow me to:
+
+* Map HTTP requests to Java methods: similar to Play! Framework (which is inspired by Ruby on Rails).
+* Use a better request/response API than the one provided by the Servlet API.
+* Define views and layouts: reuse layouts in multiple views.
+* Plug into any project: let me choose the project structure and the libraries/frameworks I want to use; don’t make this hard on me.
+* Deploy into any Servlet Container: such as Jetty or Tomcat.
+* Easy testing: test controllers and views without having to start a Servlet Container.
+
+h2. Why not a component based framework like JSF, Wicket, etc.?
+
+Short answer is that they couldn't keep the promise of isolating the user from client side development and the request/response nature of HTTP. Long answer is here.
+
+h2. Why not using the Servlet API directly?
+
+Because it sucks! It's difficult to test, it has an endless hierarchy of classes, exposes hundreds of useless methods and provides an inconvenient configuration mechanism. The only good part is that it doesn't try to hide the request/response nature of HTTP.
+
+h2. Why using FreeMarker for the view?
+
+JSP's (Java Server Pages) were dismissed from the beginning, you just can't create and reuse a layout with them. My first options were Jade and Haml but there is not a decent implementation for Java that I know. The truth is that I am happy with FreeMarker now.
+
+h2. Why not using annotations instead of the routes.config file?
+
+First, with annotations you would have all this routing configuration scattered in multiple Java files. I wanted to keep this information centralized and as simple as I could. Second, I'm against of scanning the classpath (one of the reasons I moved away from JEE), it just doesn't scale. Third, it would be a problem for hot deployment.
+
+h2. Why exposing the Jogger Request and Response in the controller actions?
+
+Because I think we should embrace the fact that HTTP is a request/response protocol. You retrieve things from the request and use the response to, well, respond.
+
+h2. Why testing without starting a Servlet Container?
+
+First, it's an unnecessary overhead. Besides, you wan't to test that your routing is working as expected, that your controller is rendering the correct template, etc. and I think that mocking the Servlet Container works well in this cases. It really depends on how you need to test your application.
+
+
+If you have another question or think that an answer is not clear enough, ping me and I will add it or improve it. Thanks.
