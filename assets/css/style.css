@@ -17,8 +17,21 @@ h1 {
 	margin-bottom: 14px;
 }
 
+ul {
+	list-style-type: none;
+	margin-left: 10px;
+}
+
 ul li {
-	padding-bottom: 5px;
+	padding-bottom: 8px;
+}
+
+ul li span.date {
+	display:inline-block; 
+	float:left; 
+	width: 90px;
+	font-size:13px; 
+	color:#999;
 }
 
 ul.images {
@@ -35,7 +48,12 @@ ul.images li.first {
 	padding-right: 10px;
 }
 
+a {
+	color: #005580;
+}
+
 a:hover {
+	color: #08C;
 	text-decoration: none;
 }
 
@@ -45,14 +63,24 @@ p {
 	text-shadow: 0px 1px 1px white;
 }
 
+#about {
+	position: fixed; 
+	top: 50px; 
+	font-size: 13px; 
+	text-align:right;
+}
+
 #about strong {
 	color:black;
 }
 
+#content {
+	margin-left: 340px;
+	padding-top: 50px;
+}
+
 section {
-	float:left;
-	width:250px;
-	padding: 0 20px 40px 20px;
+	margin-bottom: 40px;
 }
 
 section header {
@@ -60,5 +88,25 @@ section header {
 	font-weight: bold;
 	font-size: 32px;
 	line-height: 1em;
-	margin-bottom: 15px;
+	margin-bottom: 20px;
 }
+
+/* Landscape phones and down */
+ @media (max-width: 480px) {
+ 	#about {
+ 		padding: 10px;
+ 		display:block;
+ 		position: inherit;
+ 	}
+
+ 	#content {
+ 		display:block;
+ 		padding-top: 20px;
+ 		margin-left: 0;
+ 	}
+
+ 	ul li span.date {
+ 		float:none;
+ 		display:block;
+ 	}
+ }

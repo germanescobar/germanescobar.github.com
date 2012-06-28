@@ -5,17 +5,26 @@ title: Germán Escobar
 
 <div class="container">
 	<div class="row">
-		<div class="span8 offset4" style="padding-top: 50px;">
+		<div id="about" class="span3">
+			<p>My name is <strong>Germán Escobar</strong><br> and I'm a <strong>Programmer</strong></p>
+
+			<ul class="images">
+				<li class="first"><a href="http://www.twitter.com/germanescobar" target="_blank"><img src="/assets/images/twitter.png"></a></li>
+				<li><a href="https://www.github.com/germanescobar" target="_blank"><img src="/assets/images/github.png"></a></li>
+			</ul>
+
+		</div>
+		<div id="content" class="span8 offset4">
 			<section>
-				<header>Programming</header>
+				<header>Programming Posts</header>
 				<ul>
-					<li><a href="http://www.germanescobar.net/2012/05/jogger-design-decisions-faq.html">Jogger Design Decisions FAQ</a></li>
-					<li><a href="http://www.germanescobar.net/2012/05/java-web-development-back-to-basics.html">Java Web Development: Back to Basics</a></li>
-					<li><a href="http://www.germanescobar.net/2010/09/extension-points-plug-in-design.html">Extensions Points (plug-in) Design</a></li>
-					<li><a href="http://www.germanescobar.net/2010/04/4-areas-of-possible-confusion-in-jee6.html">4 areas of possible confusion in JEE 6</a></li>
-					<li><a href="http://www.germanescobar.net/2010/01/from-seam-to-cdi.html">From JBoss Seam to CDI (JEE6)</a></li>
-					<li><a href="http://www.germanescobar.net/2010/03/whats-so-wrong-with-ejbs.html">What's so wrong with EJB's?</a></li>
-					<li><a href="http://www.germanescobar.net/2009/10/ajax-jquery-google-web-toolkit-or.html">AJAX: JQuery, Google Web Toolkit or RichFaces</a></li>
+					<li><a href="http://www.germanescobar.net/2012/05/jogger-design-decisions-faq.html">Jogger Design Decisions FAQ</a><span class="date">14 May 2012</span></li>
+					<li><a href="http://www.germanescobar.net/2012/05/java-web-development-back-to-basics.html">Java Web Development: Back to Basics</a><span class="date">03 May 2012</span></li>
+					<li><a href="http://www.germanescobar.net/2010/09/extension-points-plug-in-design.html">Extensions Points (plug-in) Design</a><span class="date">21 Sep 2010</span></li>
+					<li><a href="http://www.germanescobar.net/2010/04/4-areas-of-possible-confusion-in-jee6.html">4 areas of possible confusion in JEE 6</a><span class="date">21 Sep 2010</span></li>
+					<li><a href="http://www.germanescobar.net/2010/01/from-seam-to-cdi.html">From JBoss Seam to CDI (JEE6)</a><span class="date">21 Sep 2010</span></li>
+					<li><a href="http://www.germanescobar.net/2010/03/whats-so-wrong-with-ejbs.html">What's so wrong with EJB's?</a><span class="date">21 Sep 2010</span></li>
+					<li><a href="http://www.germanescobar.net/2009/10/ajax-jquery-google-web-toolkit-or.html">AJAX: JQuery, Google Web Toolkit or RichFaces</a><span class="date">21 Sep 2010</span></li>
 				</ul>
 			</section>
 
@@ -40,37 +49,28 @@ title: Germán Escobar
 			<section>
 				<header>Emprendimiento</header>
 				<ul>
-					<li><a href="http://gaesva.blogspot.com/2012/05/la-idea-para-su-proxima-startup.html">La Idea de su Próxima Startup</a></li>
-					<li><a href="http://gaesva.blogspot.com/2012/05/el-silicon-valley-dream.html">El Silicon Valley Dream</a></li>
-					<li><a href="http://gaesva.blogspot.com/2011/02/la-ventaja-de-ser-programador.html">La Ventaja de Ser Programador</a></li>
-					<li><a href="http://gaesva.blogspot.com/2011/01/el-sentido-de-crear-empresa.html">¿Por qué crear Empresa?</a></li>
+					<li><a href="http://gaesva.blogspot.com/2012/05/la-idea-para-su-proxima-startup.html">La Idea de su Próxima Startup</a><span class="date">07 May 2012</span></li>
+					<li><a href="http://gaesva.blogspot.com/2012/05/el-silicon-valley-dream.html">El Silicon Valley Dream</a><span class="date">05 May 2012</span></li>
+					<li><a href="http://gaesva.blogspot.com/2011/02/la-ventaja-de-ser-programador.html">La Ventaja de Ser Programador</a><span class="date">23 Feb 2011</span></li>
+					<li><a href="http://gaesva.blogspot.com/2011/01/el-sentido-de-crear-empresa.html">¿Por qué crear Empresa?</a><span class="date">14 Feb 2011</span></li>
 				</ul>
 			</section>
 
 			<section>
 				<header>Estilo de Vida</header>
 				<ul>
-					<li><a href="http://gaesva.blogspot.com/2012/06/como-tener-siempre-la-razon.html">¿Cómo tener siempre la razón?</a></li>
-					<li><a href="http://gaesva.blogspot.com/2012/01/no-la-tauromaquia.html">¡No a la Tauromaquia!</a></li>
-					<li><a href="http://gaesva.blogspot.com/2011/12/yo-soy-nada.html">Yo Soy Nada</a></li>
-					<li><a href="http://gaesva.blogspot.com/2011/12/no-al-colegio.html">¡No al Colegio!</a></li>
-					<li><a href="http://gaesva.blogspot.com/2012/01/por-que-no-podria-ser-cristiano.html">¿Por qué no podría ser cristiano?</a></li>
-					<li><a href="http://gaesva.blogspot.com/2011/07/si-yo-fuera-dios_01.html">Si yo fuera Dios</a></li>
-					<li><a href="http://gaesva.blogspot.com/2011/05/por-que-aun-existen-las-religiones.html">¿Por qué aún existen las religiones?</a></li>
-					<li><a href="http://gaesva.blogspot.com/2011/01/por-que-soy-ateo.html">¿Por qué soy ateo?</a></li>
+					<li><a href="http://gaesva.blogspot.com/2012/06/como-tener-siempre-la-razon.html">¿Cómo tener siempre la razón?</a><span class="date">01 Jun 2012</span></li>
+					<li><a href="http://gaesva.blogspot.com/2012/01/no-la-tauromaquia.html">¡No a la Tauromaquia!</a><span class="date">23 Jan 2012</span></li>
+					<li><a href="http://gaesva.blogspot.com/2012/01/por-que-no-podria-ser-cristiano.html">¿Por qué no podría ser cristiano?</a><span class="date">06 Jan 2012</span></li>
+					<li><a href="http://gaesva.blogspot.com/2011/12/yo-soy-nada.html">Yo Soy Nada</a><span class="date">28 Dic 2011</span></li>
+					<li><a href="http://gaesva.blogspot.com/2011/12/no-al-colegio.html">¡No al Colegio!</a><span class="date">08 Dic 2011</span></li>
+					<li><a href="http://gaesva.blogspot.com/2011/07/si-yo-fuera-dios_01.html">Si yo fuera Dios</a><span class="date">02 Jul 2011</span></li>
+					<li><a href="http://gaesva.blogspot.com/2011/05/por-que-aun-existen-las-religiones.html">¿Por qué aún existen las religiones?</a><span class="date">22 May 2011</span></li>
+					<li><a href="http://gaesva.blogspot.com/2011/01/por-que-soy-ateo.html">¿Por qué soy ateo?</a><span class="date">24 Jan 2011</span></li>
 				</ul>
 			</section>
 
 		</div>
 
-		<div id="about" class="span3" style="position: fixed; top: 50px; font-size: 13px; text-align:right;">
-			<p>My name is <strong>Germán Escobar</strong><br>I'm a <strong>Programmer</strong></p>
-
-			<ul class="images">
-				<li class="first"><a href="http://www.twitter.com/germanescobar" target="_blank"><img src="/assets/images/twitter.png"></a></li>
-				<li><a href="https://www.github.com/germanescobar" target="_blank"><img src="/assets/images/github.png"></a></li>
-			</ul>
-
-		</div>
 	</div>
 </div>

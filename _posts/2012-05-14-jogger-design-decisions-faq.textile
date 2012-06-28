@@ -1,0 +1,7 @@
+---
+layout: post
+title: Jogger design decisions FAQ
+permalink: /2012/05/jogger-design-decisions-faq.html
+---
+
+Jogger is a lightweight library for building Web Applications that provides a routing mechanism and a view template engine based on FreeMarker. The source and documentation are on Github.
