@@ -1,0 +1,38 @@
+---
+layout: post
+title: La idea de su próxima startup
+---
+
+h2. La idea de su próxima startup
+
+Antes de escoger la idea de su próxima Startup tómese un tiempo para responder la siguiente pregunta:
+
+¿La principal fuente de ingresos serán los usuarios que paguen por usar la aplicación?[1]
+
+Si la respuesta es NO, *descarte la idea*!
+
+Piénselo por un momento. Si los usuarios no van a pagar por usar la aplicación tendrá que buscar alternativas para generar ingresos. Analicemos las dos alternativas más populares: publicidad y comisiones.
+
+h2. Publicidad
+
+Para que su Startup pueda depender de los ingresos por publicidad, necesitará conseguir una gran cantidad de usuarios. No estamos hablando de algunos miles, estamos hablando al menos un par de millones -. Para lograrlo necesitará una gran cantidad de dinero y esfuerzo. Necesita conseguir inversionistas. "Bienvenido al Silicon Valley Dream":/2012/05/05/el-silicon-valley-dream.
+
+h2. Comisiones
+
+Generalmente aplica para los market places, sitios como mercadolibre.com, airbnb.com y elempleo.com que solucionan un problema de oferta y demanda. Fíjese que antes de tener suficientes transacciones para depender de las comisiones necesitará conseguir las personas que van a ofertar y los que van a comprar. Para lograrlo necesitará una gran cantidad de dinero y esfuerzo. Necesita conseguir inversionistas. "Bienvenido al Silicon Valley Dream":/2012/05/05/el-silicon-valley-dream.
+
+
+Fíjese que las dos alternativas implican atender dos tipos de usuarios. En el caso de publicidad son los que pautan y los que consumen las pautas. En el caso de comisiones son los que ofertan y los que compran. Obviamente atender dos tipos es mucho más difícil que atender uno.
+
+h2. El Silicon Valley Dream
+
+Sí, definitivamente hay empresas que generan ingresos de publicidad y comisiones exitosamente. Pero tenga en cuenta que también hay gente que se ha ganado la lotería. ¿Cuál es la probabilidad de ganarse una lotería?
+
+El problema radica en que escuchamos de las empresas que son exitosas pero nada de las que no lo son. Y deseamos construir este tipo de empresas porque son populares, pero la verdad es que son sólo una ilusión.
+
+h2. Conclusión
+
+Al final es su decisión. Está bien si no quiere tomar mi consejo, sólo esté enterado de la realidad del "Silicon Valley Dream":/2012/05/05/el-silicon-valley-dream.
+
+
+fn1. No aplica para las tiendas online. La venta de productos es diferente y tiene sus propios retos.

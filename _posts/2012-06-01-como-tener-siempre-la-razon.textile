@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Jogger design decisions FAQ
+title: ¿Cómo tener siempre la razón?
 ---
 
 h1. ¿Cómo tener siempre la razón?

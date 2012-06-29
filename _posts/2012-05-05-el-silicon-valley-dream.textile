@@ -1,0 +1,26 @@
+---
+layout: post
+title: El Silicon Valley Dream
+---
+
+h2. El Silicon Valley Dream
+
+Latinoamérica. Empezar una Startup. Recibir capital de riesgo. Bienvenidos al *Silicon Valley Dream*, un lugar donde sólo podrá entrar si ha leído "The Lean Startup", sabe Node.js y quiere hacer un "dent in the universe" (buena suerte con eso último). 
+
+El máximo anhelo en el Silicon Valley Dream es conseguir una compleja deuda llamada *capital de riesgo*. Se logra después de pitchear a muchos inversionistas por varios meses - lo que sea que eso signifique - y todo depende de la calidad de su pitcheo. La deuda le garantiza un puesto de trabajo con un salario normal, mucha presión y poco descanso. Felicitaciones! En este momento ya será adicto al pitcheo y no, no será millonario. Es la definición de *éxito* en el Silicon Valley Dream.
+
+Olvídese de construir empresas rentables y tener una buena calidad de vida. La primera regla del Silicon Valley es "NO SE HABLA DE RENTABILIDAD NI ESTILO DE VIDA". El crecimiento descontrolado e interminables jornadas de trabajo son la norma.
+
+Las técnicas de reclutamiento del Silicon Valley Dream incluyen mostrar, a través de medios de comunicación que ellos controlan, los pocos casos de personas que se han convertido en millonarios y prometiéndoles a los jóvenes emprendedores reuniones con los inversionistas para que los puedan _pitchear_.
+
+h2. Los marginados
+
+También conocidos como *bootstrappers*,  somos un grupo de personas que decidimos no recibir capital de riesgo, queremos construir empresas rentables y tener una buena calidad de vida (recuerde la primera regla del Silicon Valley Dream).
+
+Por más extraño que parezca, NO queremos ser el próximo Pinterest.
+
+Creemos que *la falta de capital es una ventaja*. Impulsa la creatividad. Nos obliga a pensar en rentabilidad. Y nos permite concentrarnos en el producto. Trabajamos en equipos pequeños y en vez de estar *pitcheando* a los inversionistas por varios meses, utilizamos ese tiempo para crear herramientas de valor que sean útiles para el primer usuario que se registra en nuestra aplicación.
+
+h2. El futuro
+
+¿En serio queremos que nuestro máximo anhelo sea ir a Silicon Valley a conseguir capital de riesgo? ¿No es hora ya de buscar nuestra propia identidad y dejar de estar mirando para arriba?
