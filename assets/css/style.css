@@ -104,7 +104,12 @@ section ul li {
 	padding-bottom: 8px;
 }
 
-.post ul li {
+.post ul, .post ol {
+	margin-bottom: 20px;
+	padding-left: 10px;
+}
+
+.post ul li, .post ol li {
 	color: #666;
 	font-size: 13px;
 	line-height: 1.6em;
