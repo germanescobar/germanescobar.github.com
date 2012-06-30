@@ -120,6 +120,12 @@ section ul li {
 	padding-bottom: 5px;
 }
 
+.post img {
+	margin: 15px auto;
+	padding:7px;
+	border:1px solid #ccc;
+}
+
 /* Landscape phone to portrait tablet */
  @media (max-width: 767px) {
  	#about {

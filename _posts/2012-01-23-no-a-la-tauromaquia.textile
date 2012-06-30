@@ -1,0 +1,14 @@
+---
+layout: post
+title: ¡No a la Tauromaquia!
+---
+
+h1. ¡No a la Tauromaquia!
+
+Hace unos años fui a una corrida de toros. No la disfruté ni un segundo. Detrás del elaborado espectáculo se encuentra el sufrimiento y la humillación de un indefenso animal que es torturado *lentamente* para el divertimento del público. Su mirada deja al descubierto la agonía y el dolor que está sintiendo mientras que los gritos y aplausos de la afición sólo empeoran la conmovedora imagen. Fue claro para mí que el animal sólo intentaba encontrar una salida para evitar el complejo enfrentamiento.
+
+La euforia del público se hace más intensa en los momentos de mayor crueldad: cuando el toro cae de rodillas - en posición de súplica - y cuando el torero inserta su espada en el lomo del toro destrozando todos sus organos internos.
+
+<p style="text-align:center">!/assets/images/posts/tauromaquia.jpg!</p>
+
+A veces me pregunto si la gente no se da cuenta de la crueldad del espectáculo o simplemente la ignoran. No existe una justificación razonable para permitir estas torturas públicas.
