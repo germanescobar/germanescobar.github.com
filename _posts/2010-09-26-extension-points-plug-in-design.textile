@@ -10,33 +10,11 @@ In a plug-in architecture, extension points allow other users to extend the func
 
 Starting with a simple interface is simple, the problem is keeping it like that as new requirements arrive. For example, take a look at the following MessageSender interface that allow other users to implement different ways of sending messages (e.g. SMS, Email, Twitter, etc.): 
 
-<pre class="brush: java">public interface MessageSender {
-
-  void send(Message message) throws Exception;
-
-}
-</pre>
+<script src="https://gist.github.com/3026393.js?file=MessageSender.java"></script>
 
 Nice interface; it’s simple and easy to implement. However, suppose that implementations could have an optional name, an optional description and methods to setup and destroy. After adding the required methods to the MessageSender interface, it ends up like this:
 
-<pre class="brush: java">public interface MessageSender {
-
-  // clean up resources
-  void destroy() throws Exception;
-
-  // return null or "" for empty description
-  void getDescription() throws Exception;
-
-  // return null or "" for empty name
-  void getName() throws Exception;
-
-  void send(Message message) throws Exception;
-
-  // setup resources
-  void setup() throws Exception;
-
-}
-</pre>
+<script src="https://gist.github.com/3026393.js?file=BadMessageSender.java"></script>
 
 Besides breaking existing implementations, this changes will make the interface much harder to implement. So, how can we keep the MessageSender interface as simple as it was before and support the new requirements? Let’s take a look at two different approaches that will keep our SPI simple and extensible: creating optional interfaces and using annotations.
 
