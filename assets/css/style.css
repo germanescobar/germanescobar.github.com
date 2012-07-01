@@ -59,8 +59,9 @@ a:hover {
 
 p {
 	margin: 0 0 20px 0;
-	color: #666;
+	color: #444;
 	text-shadow: 0px 1px 1px white;
+	font-weight: 400;
 }
 
 p.footnote {
