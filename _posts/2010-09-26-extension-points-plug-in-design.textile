@@ -8,7 +8,7 @@ h1. Extension points (plug-in) design
 
 In a plug-in architecture, extension points allow other users to extend the functionality of your application, usually by implementing interfaces or extending abstract classes (known as the Service Provider Interface or SPI). Designing a good SPI is as important as designing a good API; it should be easy to learn and use, powerful enough to support multiple scenarios and should evolve without breaking existing implementations.
 
-Starting with a simple interface is simple, the problem is keeping it like that as new requirements arrive. For example, take a look at the following MessageSender interface that allow other users to implement different ways of sending messages (e.g. SMS, Email, Twitter, etc.): 
+Starting with a simple interface is easy, the problem is keeping it like that as new requirements arrive. For example, take a look at the following MessageSender interface that allow other users to implement different ways of sending messages (e.g. SMS, Email, Twitter, etc.): 
 
 <pre class="sunlight-highlight-java">public interface MessageSender {
 
