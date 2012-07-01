@@ -1,0 +1,138 @@
+---
+layout: post
+title: Extension points (plug-in) design
+permalink: /2010/09/extension-points-plug-in-design.html
+---
+
+h1. Extension points (plug-in) design
+
+In a plug-in architecture, extension points allow other users to extend the functionality of your application, usually by implementing interfaces or extending abstract classes (known as the Service Provider Interface or SPI). Designing a good SPI is as important as designing a good API; it should be easy to learn and use, powerful enough to support multiple scenarios and should evolve without breaking existing implementations.
+
+Starting with a simple interface is simple, the problem is keeping it like that as new requirements arrive. For example, take a look at the following MessageSender interface that allow other users to implement different ways of sending messages (e.g. SMS, Email, Twitter, etc.): 
+
+<pre class="brush: java">public interface MessageSender {
+
+  void send(Message message) throws Exception;
+
+}
+</pre>
+
+Nice interface; it’s simple and easy to implement. However, suppose that implementations could have an optional name, an optional description and methods to setup and destroy. After adding the required methods to the MessageSender interface, it ends up like this:
+
+<pre class="brush: java">public interface MessageSender {
+
+  // clean up resources
+  void destroy() throws Exception;
+
+  // return null or "" for empty description
+  void getDescription() throws Exception;
+
+  // return null or "" for empty name
+  void getName() throws Exception;
+
+  void send(Message message) throws Exception;
+
+  // setup resources
+  void setup() throws Exception;
+
+}
+</pre>
+
+Besides breaking existing implementations, this changes will make the interface much harder to implement. So, how can we keep the MessageSender interface as simple as it was before and support the new requirements? Let’s take a look at two different approaches that will keep our SPI simple and extensible: creating optional interfaces and using annotations.
+
+h2. Optional interfaces
+
+Instead of having all those methods in the MessageSender interface, we are going to split them up in three interfaces: MessageSender, Nameable and Configurable.
+
+<pre class="brush: java">public interface MessageSender {
+
+  void send(Message message) throws Exception;
+
+}
+</pre>
+
+<pre class="brush: java">public interface Nameable {
+
+  String getName();
+  String getDescription();
+
+}
+</pre>
+
+<pre class="brush: java">public interface Configurable {
+
+  void setup() throws Exception;
+  void destroy() throws Exception;
+
+}
+</pre>
+
+Now, we’ve cleaned up the MessageSender interface. Users can implement Nameable and/or Configurable if they need to (they are optional). You’ll have to check at runtime if the optional interfaces are implemented and call the corresponding methods where applicable. For example, the following helper method will call the setup method if the MessageSender implementation implements Configurable:
+
+<pre class="brush: java">...
+  public static void setup(MessageSender ms) throws Exception {
+  
+    // check if ms implements Configurable
+    if (Configurable.isInstance(ms)) {
+
+      // cast to Configurable and call setup method
+      Configurable configurable = (Configurable) ms;
+      configurable.setup();
+    }
+  }
+...
+</pre>
+
+h2. Annotations
+
+Another option, besides splitting into multiple interfaces, is to create annotations; for our example, we will need four: @Name, @Description, @SetUp and @Destroy. Implementations can place these annotations as needed. For example, a MessageSender implementation (e.g. SmsMessageSender) with a name “SMS Message Sender” that needs to be destroyed at the end will look like this:
+
+<pre class="brush: java">@Name(“SMS Message Sender”)
+public void SmsMessageSender implements MessageSender {
+
+  public void sendMessage(Message message) throws Exception {
+    // send the message (connect if not connected)
+  }
+
+  @Destroy
+  public void destroy() throws Exception {
+    // disconnect from the SMSC
+  }
+}
+</pre>
+
+As you can see, we have placed the @Name annotation above the class declaration and the @Destroy annotation in the method that will release the resources. Again, we are going to need some helper methods to check if the implementation has the annotations and call the corresponding methods. For example, the following code will check if the @Destroy method exists and will call it accordingly:
+
+<pre class="brush: java">...
+  public static void destroy(MessageSender ms) throws Exception {
+		
+    Method destroyMethod = locateDestroyMethod(ms);
+    if (destroyMethod != null) {
+      destroyMethod.invoke(ms);
+    }
+  }
+	
+  private static Method locateDestroyMethod(MessageSender ms) {
+    Method[] methods = ms.getClass().getMethods();
+    for (Method method : methods) {
+      // check if the @Destroy annotation is present
+      if (method.isAnnotationPresent(Destroy.class)) {
+        return method;
+      }
+    }
+		
+    // no method has the @Destroy annotation
+    return null;
+  }
+...
+</pre>
+
+Annotations gives us more flexibility than optional interfaces as users will only have to add the required annotations. However, both options will make your interfaces simpler, so it’s up to you.
+
+h2. Conclusion
+
+Regardless of the approach you choose, keeping the interfaces (extension points) as clean as possible will allow you to:
+
+* Lower the learning curve of the interfaces. Users can now focus on the core methods that need to be implemented in order to add new functionality.
+* Make your documentation simpler, especially for the 101 examples. Then, you can create more advanced examples that include more complex scenarios.
+* Evolve the interfaces without breaking existing implementations.

@@ -126,6 +126,10 @@ section ul li {
 	border:1px solid #ccc;
 }
 
+code {
+	color: #999;
+}
+
 /* Landscape phone to portrait tablet */
  @media (max-width: 767px) {
  	#about {
