@@ -126,6 +126,11 @@ section ul li {
 	border:1px solid #ccc;
 }
 
+pre.sunlight-highlighted {
+	word-wrap: normal;
+	background-color: white;
+}
+
 code {
 	color: #999;
 }

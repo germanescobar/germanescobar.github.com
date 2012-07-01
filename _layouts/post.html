@@ -2,7 +2,21 @@
 layout: default
 ---
 
+<link rel="stylesheet" type="text/css" href="/assets/css/sunlight.default.css" />
+<script type="text/javascript" src="/assets/javascripts/sunlight-min.js"></script>
+<script type="text/javascript" src="/assets/javascripts/sunlight.java-min.js"></script>
+
+
 <div class="post" style="margin-bottom:30px;">
 	{{ content }}
 </div>
 <a href="/" style="padding-bottom:30px;">&#8592; Home</a>
+
+<script type="text/javascript">
+	var options = { 
+    	lineNumbers: false
+	};
+
+	//var highlighter = new Sunlight.Highlighter(options);
+    Sunlight.highlightAll(options);
+</script>
