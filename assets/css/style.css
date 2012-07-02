@@ -1,9 +1,8 @@
 body {
 	background: #fefefe url('../images/noise-texture.png') repeat;
-	font-family: Helvetica, Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.6em;
+	font: 14px/22px Helvetica, Arial, sans-serif;
 	color: #444;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,9 +58,7 @@ a:hover {
 
 p {
 	margin: 0 0 20px 0;
-	color: #444;
 	text-shadow: 0px 1px 1px white;
-	font-weight: 400;
 }
 
 p.footnote {
