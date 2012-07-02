@@ -9,6 +9,8 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "Yanone Kaffeesatz", Helvetica, Tahoma, sans-serif;
 	font-weight: bold;
 	text-shadow: 0px 1px 1px white;
+	-webkit-font-smoothing: antialiased;
+	font-smoothing: antialiased;
 }
 
 h1 {
@@ -95,6 +97,8 @@ section header {
 	line-height: 1em;
 	margin-bottom: 20px;
 	text-shadow: 0px 1px 1px white;
+	font-smoothing: antialiased;
+	-webkit-font-smoothing: antialiased;
 }
 
 section ul {
