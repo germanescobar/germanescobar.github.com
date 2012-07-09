@@ -1,0 +1,121 @@
+---
+layout: post
+title: From JBoss Seam to CDI (JEE6)
+permalink: /2010/01/from-seam-to-cdi.html
+---
+
+h1. From JBoss Seam to CDI (JEE6)
+
+Seam is a popular open source application framework that has led to the creation of CDI (Contexts and Dependency Injection), a specification that is now part of the JEE 6 ecosystem. In this post I’ll show you the architectural similarities and differences between both and how Seam has influenced CDI. So lets start!
+
+h2. Contexts
+
+Contexts are definitely one of the most exciting features of Seam (you can read more about them in "this post":http://germanescobar.blogspot.com/2009/11/understanding-seam-contexts-part-1.html) and remain in the core of CDI.  Seam defines six stateful contexts: request (event), session, application, page, conversation and business process context. CDI only define 4, leaving page and business process contexts out. However, CDI allows you to define new contexts which was not possible in Seam. You can see an example of creating a context (the equivalent of the page context in Seam) by Steven Verborgh "here":http://www.verborgh.be/articles/2010/01/06/porting-the-viewscoped-jsf-annotation-to-cdi/.
+
+Additionally, CDI now defines a new “dependent” context which allows a bean to have the same context as the bean that declares it. They will share the same lifecycle meaning that “it [the dependent bean] is instantiated when the object it belongs to is created and destroyed when the object it belongs is destroyed”, as stated in the "Weld documentation":http://docs.jboss.org/weld/reference/1.0.0/en-US/html/.
+
+h2. Dependency Injection
+
+Even though Seam and CDI both make heavy use of the Dependecy Injection pattern, they take different approaches to implement it. The most notable differences are the following (which I’ll explain in more detail below):
+
+* Seam uses a string-based approach to search for components which is not type safe while CDI brings type safety to the limit.
+* Seam uses dynamic injection while CDI uses static injection.
+
+h2. Type safety
+
+In Seam, every component has a name defined by the <code>@Name</code> annotation. When an injection occurs, Seam searches for the name of the component which can lead to runtime exceptions. For example, suppose you have the following component:
+
+<pre class="sunlight-highlight-java">@Name("myBean")
+public class MyBean {
+ ...
+}</pre>
+
+Now, suppose you mistakenly inject MyBean into a String like this:
+
+<pre class="sunlight-highlight-java">@In
+private String myBean;
+</pre>
+
+This will compile just fine, but at runtime you will get an exception. In large applications, this is a problem as you will potentially have a lot of bugs at runtime, something you really want to avoid.
+
+CDI implements dependency injection based on the type of the bean like in Google Guice. There is no need to name a bean unless you want to access it from EL, in which case, you will need to annotate your bean with the @Named annotation. Lets look at a simple case of injection in CDI:
+
+<pre class="sunlight-highlight-java">public class Bean1 {
+	...
+}
+
+public class Bean2 {
+  @Inject
+  private Bean1 bean1;
+    ...
+}</pre>
+
+When Bean2 gets instantiated, Bean1 will be injected on Bean2. As you can see, there is no need to name the beans.
+
+h2. Static vs. Dynamic Injection
+
+In Seam, injection occurs on each method call. After the method completes, all injected values are desinjected (set to null). This is known as dynamic injection and it has its benefits and drawbacks. The most outstanding benefit is that you can inject components from different contexts (i.e. a request component injected in a conversation component)  and you will always have the "correct" instance on each method call. However, dynamic injection has some problems including performance and null values on concurrency.
+
+CDI uses static injection, meaning that all the values are injected on the creation of the bean and they are not desinjected between method calls. To handle injection of beans from different contexts, it uses proxies that reference the "correct" instance of each bean. A much more elegant solution in my opinion.
+
+h2. Factories
+
+Remember the <code>@Factory</code> annotation in Seam? It allows you to obtain objects that are not Seam components; or it could also be used when you need to perform some custom initialization on a component before returning it. In CDI, there is an equivalent functionality called “producer method”:
+
+<pre class="sunlight-highlight-java">@Produces
+public User getUser {
+      ...
+}</pre>
+
+Every time a User object is injected, this method will be called to obtain a reference. CDI provides a simpler alternative to a producer method called a producer field:
+
+<pre class="sunlight-highlight-java">@Produces
+private User user;</pre>
+
+h2. Events
+
+In Seam, you can decouple your components using events. Each event must have a name. You can raise an event using the <code>@Raise(“<name_of_event>”)</code> annotation or programmatically using the <code>Events.instance().raiseEvent(“<name_of_event>”)</code> method. To observe for an event, you mark the method you want to be called on the event with the <code>@Observer(“<name_of_event>”)</code> annotation.
+
+CDI grabs this concept from Seam and makes it type safe. So, for raising an event we can obtain an Event object by injection:
+
+<pre class="sunlight-highlight-java">@Inject
+private Event<User> userEvent;</pre>
+
+And then call the fire method on the Event object:
+
+<pre class="sunlight-highlight-java">userEvent.fire(user);</pre>
+
+Now, for observing an event you use the @Observes annotation:
+
+<pre class="sunlight-highlight-java">public void observeUserEvent(@Observes User user) {
+ ...
+}</pre>
+
+h2. Interceptors
+
+Seam relies heavily on interceptors for injection, security, persistence and much more. CDI also provides an interception facility called interceptors bindings, based on the Java Interceptors specification. Furthermore, CDI provides the concept of “decorator”, which is a kind of interceptor for implementing the decorator pattern.
+
+h2. Wrapping up
+
+Let’s take a look at the services provided by CDI and see if they were inspired by Seam:
+
+* Contexts: heavily inspired by Seam.
+* Dependency Injection: mostly inspired by Google Guice but we have an equivalent in Seam (which is not type safe).
+* EL integration (the #{} notation): completely inspired by Seam.
+* Interceptors: completely inspired by Seam.
+* Events: heavily inspired by Seam but type safe.
+* Wait a minute! Are these all the services provided by CDI? What about all the out-of-the-box functionality I used to have in Seam (* page flows, business process integration, security, scheduling, caching, remoting, etc.)? Don’t worry! Portable Extensions, the only service we are missing in this list, will solve this question, so just keep reading!
+
+h2. Portable Extensions and Seam 3
+
+Besides the services described above, CDI provides a powerful SPI (Service Provider Interface) you can use to create extensions (called Portable Extensions in CDI). This is where Seam 3 enters the game!
+
+Seam 3 will be a set of portable extensions that will provide almost all of the out-of-the-box functionality you actually have in Seam 2. At the time of this writing, Seam 3 is on its first steps and there is no official release yet. However, you can start developing your own portable extensions on top of CDI. Take a look at this post by Matt Corey to start writing your own first portable extension!
+
+h2. Conclusion
+
+CDI has been heavily influenced by Seam with two major architectural changes:
+
+* Instead of providing everything out-of-the-box as Seam, CDI provides a set of core technologies and a powerful SPI that will enable any one write its own portable extensions.
+* Type safety. This was included in every aspect of CDI (Contexts, DI and events), except for the EL integration.
+* Remember that Seam is a framework and CDI is a specification (Weld is the Reference Implementation). For more information on CDI, check the "Weld documentation":http://docs.jboss.org/weld/reference/1.0.0/en-US/html/ and the "CDI specification":http://jcp.org/en/jsr/detail?id=299.

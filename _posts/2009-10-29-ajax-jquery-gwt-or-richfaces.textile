@@ -1,0 +1,58 @@
+---
+layout: post
+title: AJAX - JQuery, Google Web ToolKit or RichFaces
+permalink: /2009/10/ajax-jquery-google-web-toolkit-or.html
+---
+
+h1. AJAX: JQuery, Google Web ToolKit or RichFaces
+
+If you are reading this, you probably have already decided to use an AJAX framework for your web application instead of writing plain JavaScript code yourself. However, with so many options out there, picking one is not an easy task. I’ll try to compare JQuery, GWT and RichFaces and hopefully help you to choose the one that suits your needs. 
+
+h2. JQuery
+
+JQuery is just a JavaScript library that simplifies AJAX development by allowing you to: 
+
+* Manipulate HTML (i.e. adding and removing css styles, changing input values, etc.) from the client.
+* Handle events (i.e. keydown, focus, mouseover, etc.)
+* Make AJAX calls to the server (i.e. sending data to a Servlet and processing the returned information) 
+
+JQuery is very simple to setup. All you need to do is download the jquery.js file and reference in the head of your page with the following line:
+
+<pre class="sunlight-highlight-java"><script type="text/javascript" src="jquery.js"></script></pre>
+
+HTML files are written as usually and JQuery is added where needed. There is no need of an application server to use JQuery as it is pure JavaScript. You will need, however, some JavaScript and CSS skills to get the work done. So, if you are not a very good JavaScript developer, you’ll be better with one of the other options.
+
+Server calls are done via HTTP requests so you’ll have to expose your services through Servlets. You can use JSON, XML or plain text to send and receive information but you’ll have to manage object serialization/deserialization and state between requests yourself. 
+
+h2. Google Web ToolKit 
+
+GWT is based on Java. It allows you to write code in Java and "convert" it into JavaScript. As you may know, GWT is used in some of the Google Applications including the new Google Wave and Google AdWords, so it is really fast! It now has a Plugin for Eclipse that makes development simpler.
+
+GWT is not as easy to setup as JQuery, but still relatively simple. You can use either the Eclipse Plugin or a command utility called webAppCreator to create the skeleton of the project. 
+
+Even though you wont need to know JavaScript at all, GWT is the most difficult to learn as it is a completely new technology built from ground-up. Basically, you create your template in HTML, add all the components from a Java class using the GWT API and format those components using a CSS file. You don’t get to see how your interface looks until you compile and run it. However, once you are familiar with the development process, is very straightforward. 
+
+Web server calls are done using GWT RPC or JSON over HTTP. GWT RPC hides the complexity of object serialization/deserialization. You must create a couple of interfaces and a implementation for each “service”. Then, from those services, you can call your business logic. Still not the ideal solution for server calls. Besides, you will still need to manage your state between requests yourself. 
+
+One thing I like about GWT is that it has a really good support for browser history so you can easily avoid problems when the user hits the browser's back button. However, you will need to spend development effort to achieve this. 
+
+h2. RichFaces 
+
+The thing about RichFaces is that it is really simple to understand as it is built over an already known technology: JSF (Java Server Faces). If you haven't work with JSF, I really suggest you do as it is one of the most powerful, easy to learn Web technologies, very similar to swing with heavy use of components and events. It also has a really good support for managing the state in the server using plain Java objects (POJO’s). 
+
+So, RichFaces is really a JSF set of components with AJAX support. You’ll find components such as button, table, calendar, tabs and suggestion box, among others. It also adds AJAX support to existing JSF components such as input texts and buttons. 
+
+Setup is not as easy as JQuery or GWT as you need to configure JSF first and run it using a J2EE web container. RichFaces is great with server calls but has no support for HTML manipulation. So, you’ll need integrate JQuery with RichFaces to speed up your interface which is really simple to do. 
+
+What I really like about RichFaces is the clean separation of concerns (Model, View, Controller) and that it is built on top of JSF, which makes it very powerful and easy to learn. 
+
+h2. Conclusion 
+
+Each framework offers you unique benefits depending on your skills and needs. JQuery is ideal for those JavaScript developers who need to do a lot of HTML manipulation and animation. GWT offers the benefit of JQuery to those who don’t want to write javascript code directly. Finally, if you are planning to use JSF, RichFaces gives you a perfect balance with a set of rich controls for your web interface and AJAX calls to your Backing Beans. 
+
+h2. Resources 
+
+* "JQuery":http://www.jquery.com/
+* "Google Web ToolKit":http://code.google.com/intl/es-CO/webtoolkit/
+* "RichFaces":http://www.jboss.org/richfaces
+

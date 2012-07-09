@@ -1,0 +1,25 @@
+---
+layout: post
+title: What's so wrong with EJB's?
+permalink: /2010/03/whats-so-wrong-with-ejbs.html
+---
+
+h1. What's so wrong with EJB's?
+
+It’s not that they are heavy. It’s not that they are difficult to write. So, what’s wrong with EJB’s?
+
+EJB’s can be either Stateless, Stateful or Singleton. However, when you are working on a web environment for example, these lifecycles will not suffice. Request, session and application lifecycles would be much better suited in that case. Another example is a business process application, where you could have a task or a process lifecycle; again, EJB’s will not match those lifecycles. This is what I call the *Lifecycle Mismatch*.
+
+Through the years, EJB’s have become more POJO-like, through the use of annotations and without requirements such as XML descriptors and Java interfaces. However, it doesn’t matter how simple they get, until they don’t remove the lifecycle restriction, you will end up creating additional layers in your application and different component models to adapt your required lifecycles.
+
+*Note*: The lifecycles I’m referring are also known as contexts or scopes in other frameworks/specifications.
+
+For example, take a look at JSF. They introduced the JSF Managed Beans to handle this problem. JSF Managed Beans can be bound to request, session or application contexts. From there, you are on your own on how you connect them to the EJB’s different lifecycle.
+
+CDI (Contexts and Dependency Injection) is a specification, part of the JEE stack, that is trying to fill that gap. It provides dependency injection and lifecycle management to POJO’s and EJB’s. But providing lifecycle management to EJB’s doesn’t feels right, because they already provide their own. CDI does its best effort to accommodate this mismatch.
+
+On the other hand, CDI could provide to POJO’s, all the services EJB’s currently have, through extensions. So, do we really need EJB’s? Well, not really! You can check my post "EJB’s - Time to let them go?":http://www.germanescobar.net/2009/12/ejbs-time-to-let-them-go.html for more information.
+
+h2. Conclusion
+
+EJB’s have become light weighted and easy to write. But the lifecycle mismatch is still there. POJO’s, on the other hand, don’t have this restriction and, with CDI, they could have all the services EJB’s currently provide.
