@@ -10,7 +10,7 @@ title: Germán Escobar
 		<li><a href="/2012/05/jogger-design-decisions-faq.html">Jogger Design Decisions FAQ</a><span class="date">14 May 2012</span></li>
 		<li><a href="/2012/05/java-web-development-back-to-basics.html">Java Web Development: Back to Basics</a><span class="date">03 May 2012</span></li>
 		<li><a href="/2010/09/extension-points-plug-in-design.html">Extensions Points (plug-in) Design</a><span class="date">26 Sep 2010</span></li>
-		<li><a href="http://www.germanescobar.net/2010/04/4-areas-of-possible-confusion-in-jee6.html">4 areas of possible confusion in JEE 6</a><span class="date">09 Apr 2010</span></li>
+		<li><a href="/2010/04/4-areas-of-possible-confusion-in-jee6.html">4 areas of possible confusion in JEE 6</a><span class="date">09 Apr 2010</span></li>
 		<li><a href="http://www.germanescobar.net/2010/01/from-seam-to-cdi.html">From JBoss Seam to CDI (JEE6)</a><span class="date">17 Jan 2010</span></li>
 		<li><a href="http://www.germanescobar.net/2010/03/whats-so-wrong-with-ejbs.html">What's so wrong with EJB's?</a><span class="date">28 Mar 2010</span></li>
 		<li><a href="http://www.germanescobar.net/2009/10/ajax-jquery-google-web-toolkit-or.html">AJAX: JQuery, Google Web Toolkit or RichFaces</a><span class="date">29 Oct 2009</span></li>

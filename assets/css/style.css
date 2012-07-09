@@ -116,9 +116,9 @@ section ul li {
 }
 
 .post ul li, .post ol li {
-	color: #666;
+	color: #444;
 	font-size: 13px;
-	line-height: 1.6em;
+	line-height: 1.7em;
 	padding-bottom: 5px;
 }
 
@@ -133,9 +133,7 @@ pre.sunlight-highlighted {
 	background-color: white;
 }
 
-code {
-	color: #999;
-}
+
 
 /* Landscape phone to portrait tablet */
  @media (max-width: 767px) {

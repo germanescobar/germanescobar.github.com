@@ -1,0 +1,84 @@
+---
+layout: post
+title: 4 areas of possible confusion in JEE 6
+permalink: /2010/04/4-areas-of-possible-confusion-in-jee6.html
+---
+
+h1. 4 areas of possible confusion in JEE 6 
+
+The JEE specification is released and maintained through the Java Community Process, which defines the different API’s that will be included in each release, and how they relate to each other. Due to the technical and political factors involved in the process, besides the time constraint, is no surprise that some areas of the specification may be confusing to new developers, especially with the rising number of annotations introduced by each API.
+
+In this post, I will try to explain four areas where developers might find themselves confused when working with JEE 6.
+
+h2. 1. Managed Beans and EL access
+
+The following two annotations from the JEE 6 API are both used to make a bean accessible through the Expression Language (i.e. using the <code>#{}</code> notation):
+
+* <code>@javax.faces.bean.ManagedBean</code> – Defined in the JSF 2.0 Managed Bean Annotations specification (JSR-314), it provides an alternative to the declaration of managed beans in the faces-config.xml descriptor file.
+* <code>@javax.inject.Named</code> – Defined in the Dependency Injection (JSR-330) specification, is one of the built-in qualifier types of CDI (JSR-299) used to provide a name to a bean, making it accessible through EL.
+
+So, which one to use? Always use the <code>@Named</code> annotation, unless you are working in a JSF 2.0 environment without CDI (a very unlikely scenario). There is just no reason to use JSF Managed Beans if CDI is present. You can check "this article":http://weblogs.java.net/blog/cayhorstmann/archive/2009/12/23/javaxfacesbeanmanagedbean-dead-arrival for more information.
+
+Furthermore, there is another <code>@ManagedBean</code> annotation you might also get confused with:
+
+* <code>@javax.annotation.ManagedBean</code> – Defined by the Commons Annotations specification (JSR-250), it is used to declare a managed bean as specified in the Managed Beans specification (JSR-316).
+
+Most likely, you will never need to use this annotation. Let’s look why.
+
+First, don’t confuse Managed Beans with JSF Managed Beans, they are different things. The Managed Beans specification, a subset of the JSR-316, is an effort to provide services like dependency injection, lifecycle callbacks and interceptors to POJO’s (Plain Old Java Objects), which is really cool! So, why not to use it?
+
+CDI treats all POJO’s as Managed Beans! There is no need to explicitly annotate the POJO with <code>@javax.annotation.ManagedBean</code>. Nothing stops you from doing it though.
+
+h2. 2. Duplicated @…Scoped annotations
+
+The following annotations are duplicated in the JEE 6 API:
+
+* @javax.faces.bean._RequestScoped_ and @javax.enterprise.context._RequestScoped_.
+* @javax.faces.bean.SessionScoped and @javax.enterprise.context.SessionScoped.
+* @javax.faces.bean.ApplicationScoped and @javax.enterprise.context.ApplicationScoped.
+
+The <code>@javax.faces.bean… annotations</code> are defined in the JSF Managed Beans specification (JSR-314) and the <code>@javax.enterprise.context… annotations</code> are defined in the CDI specification (JSR-299). 
+
+So, which ones to use? Always use the CDI annotations, unless you are working in a JSF 2.0 environment without CDI (a very unlikely scenario). As discussed above, there is no reason to use JSF Managed Beans if CDI is present.
+
+One scope that is missing in CDI is the @ViewScoped of JSF. However, the problem is solved by creating a portable extension which will be included in the "Seam 3 Faces Module":http://www.seamframework.org/Seam3/FacesModule.
+
+h2. 3. Defining a Singleton
+
+There are four annotations that provide very similar functionality:
+
+* <code>@javax.ejb.Singleton</code> – A new type of EJB from the JSR-318 specification, it is used to maintain a single shared instance; it’s thread safe and transactional.
+* <code>@javax.inject.Singleton</code> – From the Dependency Injection specification (JSR-330), marks a type the injector will only instantiate once.
+* <code>@javax.enterprise.inject.ApplicationScoped</code> – One of the built-in scopes from the Contexts and Dependency Injection specification (JSR-299), specifies that a bean is application scoped.
+* <code>@javax.faces.bean.ApplicationScoped</code> – Defined in the JSF 2.0 (JSR-314) Managed Beans specification, specifies that a JSF managed bean is application scoped.
+
+They all guarantee a single instance of the class. But, which one to use?
+
+We have already discussed the duplicated <code>@ApplicationScoped</code> annotations above, so we will just dismiss <code>@javax.faces.bean.ApplicationScoped</code> to move on. That leaves us with just 3 options.
+
+<code>@javax.ejb.Singleton</code> is the only one that will give you out-of-the-box “enterprise” services such as concurrency and transaction management. So, if you need these features, this is the annotation to use. You can optionally add the <code>@javax.enterprise.inject.ApplicationScoped</code> annotation but you will not feel the difference, although, CDI will treat it differently. You can check "this forum thread":http://seamframework.org/Community/SingletonEJBs for more information.
+
+Note: even though it is possible to use <code>@javax.enterprise.inject.ApplicationScoped</code> with a Stateful Session Bean, I can’t find any good reason to use it given that EJB 3.1 has introduced the Singleton Beans.
+
+If you want to use POJO’s (called Managed Beans in the JEE world), instead of EJB’s, you can also annotate them with <code>@javax.enterprise.inject.ApplicationScoped</code> to guarantee that the class is instantiated only once. Be aware that you will lose all of the services provided by EJB’s such as concurrency and transaction management.
+
+I would not suggest using <code>@javax.inject.Singleton</code> unless you are working in a JS2E environment without CDI support. You can check the Weld documentation and this forum thread for more information about how this annotation is handled in CDI.
+
+*Note:* none of the annotations discussed above will guarantee a shared single instance in a clustered environment. Usually, you will have one singleton instance per JVM.
+
+h2. 4. @Inject or @EJB
+
+They are both used for injection. <code>@Inject</code> is from the Dependency Injection specification (JSR-330) and <code>@EJB</code> from the EJB specification (JSR-318).
+
+So, which one to use?
+
+In most of the cases you will use <code>@Inject</code> over <code>@EJB</code> unless you are working on an environment with EJB’s but no CDI (very unlikely since JEE 6), or if you need to define an EJB resource. You can check the this forum thread for more information.
+
+h2. Conclusion
+
+# If you need to access a bean through EL (i.e. from a JSF page), annotate the bean with <code>@Named</code>.
+# Usually, you will never need none of the <code>@ManagedBean</code> annotations.
+# Always use the <code>@…Scoped</code> annotations from the <code>javax.enterprise.context</code> package (CDI).
+# To define a singleton, use the <code>@javax.enterprise.inject.ApplicationScoped</code> annotation. If you need the EJB services such as concurrency and transaction, add the <code>@javax.ejb.Singleton</code> annotation.
+# Always use <code>@Inject</code> instead of <code>@EJB</code>, unless you really have a motive to do so.
+
