@@ -1,0 +1,6 @@
+---
+layout: legacy
+title: EJB's  Time to let them go?
+permalink: /2009/12/ejbs-time-to-let-them-go.html
+---
+

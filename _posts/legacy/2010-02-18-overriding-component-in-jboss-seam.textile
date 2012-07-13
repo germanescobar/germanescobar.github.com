@@ -1,0 +1,5 @@
+---
+layout: legacy
+title: Overriding a component in JBoss Seam
+permalink: /2010/02/overriding-component-in-jboss-seam.html
+---

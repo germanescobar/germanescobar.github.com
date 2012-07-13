@@ -1,0 +1,5 @@
+---
+layout: legacy
+title: Mokai - Architecture of a Messaging Gateway
+permalink: /2010/09/mokai-architecture-of-messaging-gateway.html
+---

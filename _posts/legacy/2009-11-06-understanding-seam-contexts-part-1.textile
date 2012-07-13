@@ -1,0 +1,5 @@
+---
+layout: legacy
+title: Understanding Seam Contexts
+permalink: /2009/11/understanding-seam-contexts-part-1.html
+---

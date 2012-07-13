@@ -1,0 +1,5 @@
+---
+layout: legacy
+title: JMX Portable Extension for CDI
+permalink: /2010/01/cdi-portable-extension-jmx.html
+---

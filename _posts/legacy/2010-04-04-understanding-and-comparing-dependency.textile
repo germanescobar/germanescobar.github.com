@@ -1,0 +1,5 @@
+---
+layout: legacy
+title: Understanding and comparing Dependency Injection Frameworks
+permalink: /2010/03/understanding-and-comparing-dependency.html
+---

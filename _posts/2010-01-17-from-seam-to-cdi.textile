@@ -2,6 +2,8 @@
 layout: post
 title: From JBoss Seam to CDI (JEE6)
 permalink: /2010/01/from-seam-to-cdi.html
+categories: [programming]
+tags: [jboss-seam,cdi,jee]
 ---
 
 h1. From JBoss Seam to CDI (JEE6)

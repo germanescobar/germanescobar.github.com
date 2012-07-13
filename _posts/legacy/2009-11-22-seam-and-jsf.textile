@@ -1,0 +1,5 @@
+---
+layout: legacy
+title: Seam and JSF
+permalink: /2009/11/seam-and-jsf.html
+---
