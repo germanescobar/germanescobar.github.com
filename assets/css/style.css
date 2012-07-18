@@ -133,20 +133,46 @@ pre.sunlight-highlighted {
 	background-color: white;
 }
 
+.video {
+	height: 304px;
+	width: 540px;
+}
 
 
-/* Landscape phone to portrait tablet */
- @media (max-width: 767px) {
+
+ /* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
  	#about {
  		padding: 20px 20px 0 0;
  		display:block;
  		position: inherit;
  	}
 
+ 	.video {
+		height: 225px;
+		width: 400px;
+	}
+
  	
  }
 
-/* Landscape phones and down */
+@media (max-width: 979px) {
+
+	.video {
+		height: 225px;
+		width: 400px;
+	}
+}
+
+/* Large desktop */
+ @media (min-width: 1200px) { 
+ 	.video {
+		height: 360px;
+		width: 640px;
+	}
+ }
+
+ /* Landscape phones and down */
 @media (max-width: 480px) {
  	h1 {
  		font-size: 34px;
@@ -168,4 +194,12 @@ pre.sunlight-highlighted {
  		float:none;
  		display:block;
  	}
+
+ 	.video {
+		height: 158px;
+		width: 280px;
+	}
  }
+
+
+

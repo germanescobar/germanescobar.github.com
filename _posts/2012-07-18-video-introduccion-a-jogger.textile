@@ -1,0 +1,19 @@
+---
+layout: post
+title: Video - Introducción a Jogger
+---
+
+h1. Video - Introducción a Jogger
+
+En este screencast vamos a crear un proyecto para explicar cómo empezar a trabajar con Jogger en el menor tiempo posible y que se den una idea de cómo funciona.
+
+<div style="margin: 0 auto; text-align:center;">
+<iframe src="http://fast.wistia.com/embed/iframe/922eb50a92?controlsVisibleOnLoad=true&version=v1&videoHeight=360&videoWidth=640" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed video" name="wistia_embed"></iframe>
+</div>
+
+h2. Links
+
+* "Página Principal de Documentación":https://github.com/germanescobar/jogger
+* "Inicio Rápido":https://github.com/germanescobar/jogger/wiki/Getting-Started
+* "Integración con Spring":https://github.com/germanescobar/jogger/wiki/Spring-Integration-Guide
+* "Desplegar a Heroku":https://github.com/germanescobar/jogger/wiki/Getting-Started-with-Heroku

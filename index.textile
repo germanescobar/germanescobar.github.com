@@ -7,6 +7,7 @@ title: Germán Escobar
 <section>
 	<header>Programming Posts</header>
 		<ul>
+		<li><a href="/2012/07/18/video-introduccion-a-jogger">Video: Introducción a Jogger</a><span class="date">18 Jul 2012</span></li>	
 		<li><a href="/2012/05/jogger-design-decisions-faq.html">Jogger Design Decisions FAQ</a><span class="date">14 May 2012</span></li>
 		<li><a href="/2012/05/java-web-development-back-to-basics.html">Java Web Development: Back to Basics</a><span class="date">03 May 2012</span></li>
 		<li><a href="/2010/09/extension-points-plug-in-design.html">Extensions Points (plug-in) Design</a><span class="date">26 Sep 2010</span></li>
