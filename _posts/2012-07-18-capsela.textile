@@ -1,0 +1,14 @@
+---
+layout: post
+title: Capsela
+---
+
+h1. Capsela
+
+Me levanté ese día alrededor de las seis de la mañana. Estaba muy ansioso. Mis padres dejaban los regalos encima de la cama mientras dormíamos aunque ya sabíamos que eran ellos, y no Papá Noel, los que los traían. Tenía 8 años si mal no recuerdo. Destapé los regalos rápidamente y ahí estaba. El Capsela.
+
+<p style="text-align:center; padding-right: 10px;"><a href="http://en.wikipedia.org/wiki/Capsela" target="_blank">!/assets/images/posts/capsela.jpg!</a></p>
+
+Aunque ya es un recuerdo lejano, con Capsela podía construir aparatos terrestres y acuáticos con cápsulas plásticas y otros componentes como ruedas, flotadores, correas, engranajes, etc., que constituían los bloques básicos de construcción. Las cápsulas plásticas creaban la estructura del aparato cumpliendo también propósitos eléctricos y mecánicos. 
+
+Era pura genialidad ;)

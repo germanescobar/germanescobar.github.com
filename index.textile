@@ -49,6 +49,7 @@ title: Germán Escobar
 <section>
 	<header>Estilo de Vida</header>
 	<ul>
+		<li><a href="/2012/07/18/capsela">Capsela</a><span class="date">18 Jul 2012</span></li>
 		<li><a href="/2012/06/01/como-tener-siempre-la-razon">¿Cómo tener siempre la razón?</a><span class="date">01 Jun 2012</span></li>
 		<li><a href="/2012/01/23/no-a-la-tauromaquia/">¡No a la Tauromaquia!</a><span class="date">23 Jan 2012</span></li>
 		<li><a href="http://gaesva.blogspot.com/2012/01/por-que-no-podria-ser-cristiano.html">¿Por qué no podría ser cristiano?</a><span class="date">06 Jan 2012</span></li>
