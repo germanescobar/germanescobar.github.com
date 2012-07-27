@@ -1,0 +1,6 @@
+---
+layout: default
+title: Java Day
+---
+
+<script src="http://embed.mediastre.am/e.js"></script><script>config={"88c1a5a2d2857ed3df66957e14be91c0d6e81c46":[{stream:"elibom",size:"640x?",aspect:"16:9",autoplay:true,zones:["us"]}]};e = new MEmbed(config);</script>
