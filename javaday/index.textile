@@ -3,4 +3,22 @@ layout: default
 title: Java Day
 ---
 
-<script src="http://embed.mediastre.am/e.js"></script><script>config={"88c1a5a2d2857ed3df66957e14be91c0d6e81c46":[{stream:"elibom",size:"640x?",aspect:"16:9",autoplay:true,zones:["us"]}]};e = new MEmbed(config);</script>
+h1. Transmisión Java Day
+
+p. La transmisión comienza el <strong>Sábado 28 de Julio 09:00 a.m. GMT-5</strong>.
+
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://embed.mediastre.am/e.js"></script>
+<script>
+	var width = 600;
+	var browserWidth = $(window).width();
+	if (browserWidth < 480) {
+		width = 280;
+	} else if (browserWidth < 979) {
+		width = 400;
+	}
+
+
+	config={"88c1a5a2d2857ed3df66957e14be91c0d6e81c46":[{stream:"elibom",size:"600x?",aspect:"16:9",autoplay:true,zones:["us"]}]};
+	e = new MEmbed(config);
+</script>
