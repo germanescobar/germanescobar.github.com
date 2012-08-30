@@ -5,8 +5,9 @@ title: Germán Escobar
 
 
 <section>
-	<header>Programming Posts</header>
+	<header>Programming</header>
 		<ul>
+		<li><a href="/2012/08/28/charla-desarrollo-web-estado-actual-y-mejores-practicas/">Charla: Desarrollo Web - Estado actual y mejores prácticas</a><span class="date">28 Ago 2012</span></li>
 		<li><a href="/2012/07/18/video-introduccion-a-jogger">Video: Introducción a Jogger</a><span class="date">18 Jul 2012</span></li>	
 		<li><a href="/2012/05/jogger-design-decisions-faq.html">Jogger Design Decisions FAQ</a><span class="date">14 May 2012</span></li>
 		<li><a href="/2012/05/java-web-development-back-to-basics.html">Java Web Development: Back to Basics</a><span class="date">03 May 2012</span></li>
@@ -25,6 +26,7 @@ title: Germán Escobar
 		<li><a href="https://github.com/germanescobar/mokai">Mokai</a>: A Java Messaging Gateway</li>
 		<li><a href="https://github.com/germanescobar/smpp-server">SMPP Server</a></li>
 		<li><a href="https://github.com/germanescobar/http-server">HTTP Server</a></li>
+		<li><a href="https://github.com/germanescobar/jmx-annotations">JMX Annotations</a></li>
 	</ul>
 </section>
 

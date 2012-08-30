@@ -1,0 +1,12 @@
+---
+layout: post
+title: Charla - Desarrollo Web. Estado actual y mejores prácticas.
+---
+
+h1. Desarrollo Web: Estado actual y mejores prácticas
+
+Esta es el video de la charla que di en el Colombia Java User Group el día 28 de Julio de 2012.
+
+<div style="margin: 0 auto; text-align:center;">
+	<iframe class="video" src="http://www.youtube.com/embed/KYMfXLlRTck" frameborder="0" allowfullscreen></iframe>
+</div>

@@ -23,7 +23,7 @@ I wanted a super simple Java web framework that would allow me to:
 
 h2. Why not a component based framework like JSF, Wicket, etc.?
 
-Short answer is that they couldn't keep the promise of isolating the user from client side development and the request/response nature of HTTP. Long answer is here.
+Short answer is that they couldn't keep the promise of isolating the user from client side development and the request/response nature of HTTP. Long answer is "here":/2012/05/java-web-development-back-to-basics.html/.
 
 h2. Why not using the Servlet API directly?
 

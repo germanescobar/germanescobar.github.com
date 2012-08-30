@@ -3,7 +3,7 @@ layout: post
 title: Video - Introducción a Jogger
 ---
 
-h1. Video - Introducción a Jogger
+h1. Introducción a Jogger
 
 En este screencast vamos a crear un proyecto para explicar cómo empezar a trabajar con Jogger en el menor tiempo posible y que se den una idea de cómo funciona.
 
