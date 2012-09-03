@@ -99,6 +99,16 @@ blockquote p {
 	line-height: 1em;
 }
 
+#about a span.name {
+	letter-spacing: 2px;
+}
+
+#about a span.last {
+	display:block; 
+	color: #E14E0C; 
+	letter-spacing: 1px;
+}
+
 #about strong {
 	color:black;
 }
