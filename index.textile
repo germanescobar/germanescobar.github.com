@@ -57,7 +57,7 @@ title: Germán Escobar
 		<li><a href="/2012/01/23/no-a-la-tauromaquia/">¡No a la Tauromaquia!</a><span class="date">23 Jan 2012</span></li>
 		<li><a href="http://gaesva.blogspot.com/2012/01/por-que-no-podria-ser-cristiano.html">¿Por qué no podría ser cristiano?</a><span class="date">06 Jan 2012</span></li>
 		<li><a href="http://gaesva.blogspot.com/2011/12/yo-soy-nada.html">Yo Soy Nada</a><span class="date">28 Dic 2011</span></li>
-		<li><a href="http://gaesva.blogspot.com/2011/12/no-al-colegio.html">¡No al Colegio!</a><span class="date">08 Dic 2011</span></li>
+		<li><a href="2011/12/08/no-al-colegio/">¡No al Colegio!</a><span class="date">08 Dic 2011</span></li>
 		<li><a href="http://gaesva.blogspot.com/2011/07/si-yo-fuera-dios_01.html">Si yo fuera Dios</a><span class="date">02 Jul 2011</span></li>
 		<li><a href="http://gaesva.blogspot.com/2011/05/por-que-aun-existen-las-religiones.html">¿Por qué aún existen las religiones?</a><span class="date">22 May 2011</span></li>
 		<li><a href="http://gaesva.blogspot.com/2011/01/por-que-soy-ateo.html">¿Por qué soy ateo?</a><span class="date">24 Jan 2011</span></li>
