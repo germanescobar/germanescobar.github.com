@@ -4,7 +4,7 @@ title: Germán Escobar
 ---
 
 
-<section>
+<section class="index">
 	<header>Programming</header>
 		<ul>
 		<li><a href="/2012/08/28/charla-desarrollo-web-estado-actual-y-mejores-practicas/">Charla: Desarrollo Web - Estado actual y mejores prácticas</a><span class="date">28 Ago 2012</span></li>
@@ -19,7 +19,7 @@ title: Germán Escobar
 	</ul>
 </section>
 
-<section>
+<section class="index">
 	<header>Open Source Projects</header>
 	<ul>
 		<li><a href="https://github.com/germanescobar/jogger">Jogger</a>: a Java Web Framework</li>
@@ -30,7 +30,7 @@ title: Germán Escobar
 	</ul>
 </section>
 
-<section>
+<section class="index">
 	<header>Companies / Empresas</header>
 	<ul>
 		<li><a href="http://www.elibom.com/">elibom.com</a>: co-founder</li>
@@ -38,7 +38,7 @@ title: Germán Escobar
 	</ul>
 </section>
 
-<section>
+<section class="index">
 	<header>Emprendimiento</header>
 	<ul>
 		<li><a href="/2012/05/07/la-idea-para-su-proxima-startup">La Idea de su Próxima Startup</a><span class="date">07 May 2012</span></li>
@@ -48,7 +48,7 @@ title: Germán Escobar
 	</ul>
 </section>
 
-<section>
+<section class="index">
 	<header>Estilo de Vida</header>
 	<ul>
 		<li><a href="/2012/08/03/una-nueva-propuesta-educativa/">Una nueva propuesta educativa</a><span class="date">03 Aug 2012</span></a></li>

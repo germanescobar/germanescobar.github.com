@@ -1,25 +1,25 @@
 body {
 	background: #fefefe url('../images/noise-texture.png') repeat;
-	font: 16px/26px Helvetica, Arial, sans-serif;
+	font: 16px/26px 'Helvetica Neue', Arial, sans-serif;
 	color: #333;
 
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: "Yanone Kaffeesatz", Helvetica, Tahoma, sans-serif;
-	font-weight: bold;
 	text-shadow: 0px 1px 1px white;
 	-webkit-font-smoothing: antialiased;
 	font-smoothing: antialiased;
+	font-weight: normal;
 }
 
 h1 {
-	font-size: 40px;
+	font-size: 32px;
 	margin-bottom: 40px;
 }
 
 h2 {
-	font-size: 30px;
+	font-size: 28px;
 	margin-bottom: 18px;
 }
 
@@ -94,19 +94,19 @@ blockquote p {
 	display: block;
 	color: #444;
 	font-family: "Yanone Kaffeesatz", Helvetica, Tahoma, sans-serif;
-	font-weight: bold;
-	font-size: 28px;
+	font-size: 34px;
+	font-weight: 200;
 	line-height: 1em;
 }
 
 #about a span.name {
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 #about a span.last {
 	display:block; 
-	color: #E14E0C; 
-	letter-spacing: 1px;
+	color: #005580; 
+	letter-spacing: 0px;
 }
 
 #about strong {
@@ -122,10 +122,10 @@ section {
 }
 
 section header {
+	color: #444;
 	font-family: "Yanone Kaffeesatz", Helvetica, Tahoma, sans-serif;
-	font-weight: bold;
-	font-size: 38px;
-	line-height: 1em;
+	font-size: 32px;
+	line-height: 1.2em;
 	margin-bottom: 20px;
 	text-shadow: 0px 1px 1px white;
 	font-smoothing: antialiased;
@@ -139,6 +139,14 @@ section ul {
 
 section ul li {
 	padding-bottom: 12px;
+}
+
+section.index a {
+	color: #444;
+}
+
+section.index a:hover {
+	color: black;
 }
 
 .post ul, .post ol {
