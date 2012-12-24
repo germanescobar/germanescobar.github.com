@@ -21,19 +21,19 @@ git pull
 git checkout -b issue-xx-brief-description
 </pre>
 
-At this point you are ready to start hacking. Notice that the name of the branch has the id of the issue you are working on and a brief description to easily identify it.
+At this point you are ready to start hacking. Notice that the name of the branch has the number of the issue you are working on and a brief description to easily identify it.
 
 h2. 2. Working on the branch
 
 I always encourage the team to commit often. This has multiple advantages and you can always reorder and change your commits before pushing them to the remote repository. I usually squash them in one or two commits when I'm done.
 
-Before you push a your branch always run the following commands:
+But, before pushing your branch to the remote repository, always run the following two commands:
 
 <pre class="sunlight-highlight-bash">git fetch origin
 git rebase origin/master
 </pre>
 
-This applies our changes on top of the master branch making sure that there will be no conflicts when merging into master[1].
+This applies your changes on top of the master branch making sure that there will be no conflicts when merging into master[1].
 
 h2. 3. Pushing and initiating the pull request
 
