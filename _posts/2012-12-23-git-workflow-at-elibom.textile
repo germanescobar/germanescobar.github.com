@@ -5,7 +5,7 @@ title: The Git Workflow at Elibom
 
 h1. The Git Workflow at Elibom
 
-Now that I'm *not* the only developer at "elibom.com":http://www.elibom.com/, I had to choose a git workflow for our nascent team. The problem, however, is that git it is so flexible that there are multiple solutions you can choose from. That's why I decided to write this post describing the workflow that we are currently using, largely based on "this post from reinh.com":http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html which I really encourage you to read.
+Now that I'm *not* the only developer at "elibom.com":http://www.elibom.com/, I had to choose a git workflow for our nascent team. The problem, however, is that git is so flexible that there are multiple solutions you can choose from. That's why I decided to write this post describing the workflow that we are currently using, largely based on "this post from reinh.com":http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html which I really encourage you to read.
 
 We use a "centralized workflow":http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows#Centralized-Workflow with a private repository at "Github":http://www.github.com/ and we all have _push access_ to it. There are two important rules though:
 
@@ -21,13 +21,13 @@ git pull
 git checkout -b issue-xx-brief-description
 </pre>
 
-At this point you are ready to start hacking. Notice that the name of the branch has the id of the issue we are working on and a brief description to easily identify it.
+At this point you are ready to start hacking. Notice that the name of the branch has the id of the issue you are working on and a brief description to easily identify it.
 
 h2. 2. Working on the branch
 
 I always encourage the team to commit often. This has multiple advantages and you can always reorder and change your commits before pushing them to the remote repository. I usually squash them in one or two commits when I'm done.
 
-Before pushing your branch run the following commands:
+Before you push a your branch always run the following commands:
 
 <pre class="sunlight-highlight-bash">git fetch origin
 git rebase origin/master
@@ -37,23 +37,23 @@ This applies our changes on top of the master branch making sure that there will
 
 h2. 3. Pushing and initiating the pull request
 
-To push a branch to the remote repository run the following command:
+To push a branch to the remote repository run the following command[2]:
 
 <pre class="sunlight-highlight-bash">git push -u origin <name_of_branch></pre>
 
-Now we need to ask the integrator to merge our branch. We do this by opening a pull request[2], which can be done from "Github's":http://www.elibom.com/ web interface. The problem is that "Github":http://www.elibom.com/ creates a new issue for each pull request, but we are already using "Github Issues":https://github.com/blog/831-issues-2-0-the-next-generation. So, what we really want is to attach our pull request to an existing issue.
+Now we need to ask the integrator to merge our branch. We do this by opening a pull request[3] in "Github":http://www.github.com/. We found a problem here because "Github":http://www.github.com/ creates a new issue for each pull request and we are already using "Github Issues":https://github.com/blog/831-issues-2-0-the-next-generation. What we really want is to attach our pull request to an existing issue.
 
 Fortunately, there is a tool call "hub":https://github.com/defunkt/hub that you can use to create a pull request and attach it to a "Github":http://www.elibom.com/ issue using a single command:
 
 <pre class="sunlight-highlight-bash">hub pull-request -i <issue_number></pre>
 
-Our pull request is now ready to be merged by the integrator. Notice that the integrator can do some code review at this point, further discuss the issue and even ask for some changes to the code[3].
+Our pull request is now ready to be merged by the integrator, who can do some code review at this point, further discuss the issue and even ask for some changes to the code[4].
 
 h2. Caveats
 
 There are some caveats that you should be aware of:
 
-- If there are multiple pull requests opened that conflict with each other, the integrator will have to solve them or merge one and ask the other developer to solve them[4].
+- If there are multiple pull requests opened that conflict with each other, the integrator will have to solve them. The other option is to merge one and ask the other developer to solve them[5].
 
 - Never do a rebase if you have already pushed a branch. First delete the remote branch with the following command and then push again.
 
@@ -65,8 +65,10 @@ This workflow has worked really well for us and I hope it helps other teams deci
 
 fn1. If there are conflicts you will have to solve them yourself at this point.
 
-fn2. Git comes with a pull-request command but it's different from the one of Github.
+fn2. The -u flag tells git to start "tracking the branch":http://git-scm.com/book/en/Git-Branching-Remote-Branches#Tracking-Branches.
 
-fn3. Both the developer and the integrator can push more commits to the branch which will become part of the pull request.
+fn3. Git comes with a pull-request command but it's different from the one of Github.
 
-fn4. He/she will have to delete the remote branch, rebase and then push again.
+fn4. Both the developer and the integrator can push more commits to the branch which will become part of the pull request.
+
+fn5. He/she will have to delete the remote branch, rebase and then push again.

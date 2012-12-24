@@ -36,8 +36,8 @@ ul {
 }
 
 ul li span.date {
-	display:inline-block; 
-	float:left; 
+	display:inline-block;
+	float:left;
 
 	width: 90px;
 	color:#999;
@@ -76,7 +76,8 @@ p {
 }
 
 p.footnote {
-	font-size: 12px;
+	font-size: 13px;
+	margin-bottom: 5px;
 }
 
 blockquote p {
@@ -84,9 +85,9 @@ blockquote p {
 }
 
 #about {
-	position: fixed; 
-	top: 50px; 
-	font-size: 16px; 
+	position: fixed;
+	top: 50px;
+	font-size: 16px;
 	text-align:center;
 	border-right: 1px solid transparent;
 }
@@ -105,8 +106,8 @@ blockquote p {
 }
 
 #about a span.last {
-	display:block; 
-	color: #005580; 
+	display:block;
+	color: #005580;
 	letter-spacing: 0px;
 }
 
@@ -135,7 +136,7 @@ section header {
 
 section ul {
 	list-style-type: none;
-	margin-left: 10px;	
+	margin-left: 10px;
 }
 
 section ul li {
@@ -193,7 +194,7 @@ pre.sunlight-highlighted {
 		width: 400px;
 	}
 
- 	
+
  }
 
 @media (max-width: 979px) {
@@ -205,7 +206,7 @@ pre.sunlight-highlighted {
 }
 
 /* Large desktop */
- @media (min-width: 1200px) { 
+ @media (min-width: 1200px) {
  	.video {
 		height: 360px;
 		width: 640px;
