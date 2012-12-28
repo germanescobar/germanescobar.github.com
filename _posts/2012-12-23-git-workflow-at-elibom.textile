@@ -5,7 +5,7 @@ title: The Git Workflow at Elibom
 
 h1. The Git Workflow at Elibom
 
-Now that I'm *not* the only developer at "elibom.com":http://www.elibom.com/, I had to choose a git workflow for our nascent team. The problem, however, is that git is so flexible that there are multiple solutions you can choose from. That's why I decided to write this post describing the workflow that we are currently using, largely based on "this post from reinh.com":http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html which I really encourage you to read.
+Recently, I had to choose a git workflow for our nascent development team at "elibom.com":http://www.elibom.com/ (I was a solo developer before). Git is so flexible that there are multiple options you can choose from. That's why I decided to write this post, describing the workflow that we are currently using, largely based on "this other post from reinh.com":http://reinh.com/blog/2009/03/02/a-git-workflow-for-agile-teams.html which I really encourage you to read.
 
 We use a "centralized workflow":http://git-scm.com/book/en/Distributed-Git-Distributed-Workflows#Centralized-Workflow with a private repository at "Github":http://www.github.com/ and we all have _push access_ to it. There are two important rules though:
 
@@ -27,13 +27,13 @@ h2. 2. Working on the branch
 
 I always encourage the team to commit often. This has multiple advantages and you can always reorder and change your commits before pushing them to the remote repository. I usually squash them in one or two commits when I'm done.
 
-But, before pushing your branch to the remote repository, always run the following two commands:
+Before pushing your branch to the remote repository always run the following two commands:
 
 <pre class="sunlight-highlight-bash">git fetch origin
 git rebase origin/master
 </pre>
 
-This applies your changes on top of the master branch making sure that there will be no conflicts when merging into master[1].
+These commands apply your changes on top of the remote master branch allowing the integrator to make a clean merge of your branch into master (i.e. without having to solve any conflict)[1].
 
 h2. 3. Pushing and initiating the pull request
 
@@ -63,7 +63,7 @@ There are some caveats that you should be aware of:
 This workflow has worked really well for us and I hope it helps other teams deciding on their git workflow.
 <br>
 
-fn1. If there are conflicts you will have to solve them yourself at this point.
+fn1. If there are conflicts with the master branch, you will have to solve them at this point.
 
 fn2. The -u flag tells git to start "tracking the branch":http://git-scm.com/book/en/Git-Branching-Remote-Branches#Tracking-Branches.
 
