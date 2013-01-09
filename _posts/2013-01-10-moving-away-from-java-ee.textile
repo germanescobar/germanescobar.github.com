@@ -1,0 +1,75 @@
+---
+layout: post
+title: Moving away from Java EE
+---
+
+h1. Moving away from Java EE
+
+Last year I did a talk at the "ColombiaJUG":https://twitter.com/cojug in Bogotá about the _state and best practices of web development_[1]. There, I explained how Java EE is hurting the Java platform and why we need to move away from it. In this post I will expose the reasoning behind that statement in plain vanilla English.
+
+Let me give you some background first. I worked extensively with Java EE for ten years. I'm a SCEA (Sun Certified Enterprise Architect), have a JBoss Seam app in production at "elibom.com":http://www.elibom.com/ (my company)[2] and used to write about Java EE and JBoss Seam in the past. I was really deep into this stuff.
+
+I know that trying to convince you about moving away from Java EE in this post won't work. This is not going to be a long list with the things that are wrong with Java EE. Instead, I will just tell you what opened my eyes and, hopefully, you will find inspiration to see it for yourself.
+
+A couple of years ago I started to learn "Ruby on Rails":http://rubyonrails.org/, "Express.js":http://expressjs.com/ (Node.js) and more recently "Sinatra":http://www.sinatrarb.com/ (Ruby) and "Flask":http://flask.pocoo.org/ (Python). *I realized that you can create secure, scalable, reliable and robust applications without the hassle of an application server.* 
+
+h2. Really? How?
+
+Well, you just put your code in a file and run it. Want to check an example? Create a file named <code>app.py</code> and paste the following code[3]:
+
+<pre>from flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    app.run()
+</pre>
+
+Open the console, locate the file and then type[4]:
+
+<pre>$ pip install Flask
+$ python app.py</pre>
+
+There you go, you now have an application running!
+
+h2. What about security, transactions, etc?
+
+Include them when you need them. That's the way it should be. Each of the mentioned framework has great modules that you can use for everything that the application server "gives you".
+
+h2. What about standards?
+
+Don't need them. I can show you unlimited examples supporting this. Companies are adopting Ruby, Python and Node.js successfully and actually finding developers with the required knowledge. All without standards. You might be thinking that this could lead to a maintainability issue in the future but have you tried to maintain an EJB 2.1 application yourself?
+
+h2. So, why do application servers exists in Java?
+
+History and politics. 
+
+<p style="text-align:center">!/assets/images/posts/sun-servers.gif!</p>
+
+Remember these big mainframes that cost thousands and thousands of dollars? You had to justify the investment. You couldn't just pay all that money to install "one" application. Today we are experiencing an important paradigm shift regarding infrastructure with cloud computing. Having smaller instances allows you to scale easily. You don't need an "application server" anymore, *your application should be able to run in one or more small independent processes. It should be self-contained and stateless*[5]. 
+
+On the other hand, Java EE is a big industry. The application server vendors sell billions of dollars in "Enterprise Editions", support and other Java EE related services. Killing Java EE is killing one their products, a profitable one. Their customers include banks, insurance and health companies that couldn't care less about software development.
+
+h2. What alternatives exists in Java?
+
+"Spring":http://www.springsource.org/spring-framework has always been a good alternative. They lost direction when they tried to align with Java EE5 but quickly realized the error and got back on track. They are doing a good job by being a step (or two) ahead of Java EE. Recently, you might have read some posts explaining why Java EE is better than Spring. This is "the industry" trying to keep the machine running.
+
+For web development you could use "Jetty":http://www.eclipse.org/jetty/ or "Tomcat":http://tomcat.apache.org/ but there are more complete alternatives such as "Play! Framework":http://www.playframework.org/ (a port of Ruby on Rails), "vert.x":http://vertx.io/ (a port from Node.js) and "Spark":http://www.sparkjava.com/ (port of Sinatra) among others. 
+
+The problem with these ports is that they feel weird in the Java language. A couple of months ago I started "Jogger":https://github.com/germanescobar/jogger, a micro-web framework that takes ideas from "Ruby on Rails":http://rubyonrails.org/, "Express.js":http://expressjs.com/ and "Flask":http://flask.pocoo.org/ to create a tailored solution for Java, _built from the ground up_. The project is hosted on "Github":https://github.com/germanescobar/jogger if you want to check it out.
+
+
+<br>
+
+fn1. You can actually watch the recording "here":http://germanescobar.net/2012/08/28/charla-desarrollo-web-estado-actual-y-mejores-practicas/. It's in Spanish.
+
+fn2. We are actually rewriting it in "Jogger":https://github.com/germanescobar/jogger and "Spring":http://www.springsource.org/spring-framework.
+
+fn3. The code is taken from the "Flask site":http://flask.pocoo.org/.
+
+fn4. You will need to have Python and Pip installed.
+
+fn4. This is also the approach of PaaS services such as Heroku.
