@@ -5,11 +5,13 @@ title: Moving away from Java EE
 
 h1. Moving away from Java EE
 
-Last year I did a talk at the "ColombiaJUG":https://twitter.com/cojug in Bogotá about the _state and best practices of web development_[1]. There, I explained how Java EE is hurting the Java platform and why we need to move away from it. In this post I will expose the reasoning behind that statement in plain vanilla English.
+Last year I did a talk at the "CoJUG":https://twitter.com/cojug in Bogotá about the _state and best practices of web development_[1]. There, I explained how Java EE is hurting the Java platform and why we need to move away from it. In this post I will expose the reasoning behind that statement in plain vanilla English.
 
-Let me give you some background first. I worked extensively with Java EE for ten years. I'm a SCEA (Sun Certified Enterprise Architect), have a JBoss Seam app in production at "elibom.com":http://www.elibom.com/ (my company)[2] and used to write about Java EE and JBoss Seam in the past. I was really deep into this stuff.
+Let me give you some background first. I worked extensively with Java EE for ten years or so. I'm a SCEA (Sun Certified Enterprise Architect), have a JBoss Seam app in production at "elibom.com":http://www.elibom.com/ (my company)[2] and used to write about Java EE and JBoss Seam in the past. I was really deep into this stuff.
 
-I know that trying to convince you about moving away from Java EE in this post won't work. This is not going to be a long list with the things that are wrong with Java EE. Instead, I will just tell you what opened my eyes and, hopefully, you will find inspiration to see it for yourself.
+I'm not anymore.
+
+In this post, however, I wont try to convince you about moving away from Java EE. This is not going to be a long list with the things that are wrong with it. Instead, I'll tell you what opened my eyes and, hopefully, you will find inspiration to see it for yourself.
 
 A couple of years ago I started to learn "Ruby on Rails":http://rubyonrails.org/, "Express.js":http://expressjs.com/ (Node.js) and more recently "Sinatra":http://www.sinatrarb.com/ (Ruby) and "Flask":http://flask.pocoo.org/ (Python). *I realized that you can create secure, scalable, reliable and robust applications without the hassle of an application server.* 
 
