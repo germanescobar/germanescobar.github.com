@@ -63,6 +63,8 @@ For web development you could use "Jetty":http://www.eclipse.org/jetty/ or "Tomc
 
 The problem with these ports is that they feel weird in the Java language. A couple of months ago I started "Jogger":https://github.com/germanescobar/jogger, a micro-web framework that takes ideas from "Ruby on Rails":http://rubyonrails.org/, "Express.js":http://expressjs.com/ and "Flask":http://flask.pocoo.org/ to create a tailored solution for Java, _built from the ground up_. The project is hosted on "Github":https://github.com/germanescobar/jogger if you want to check it out.
 
+Related post: "Java web development: back to basics":http://germanescobar.net/2012/05/java-web-development-back-to-basics.html/
+
 
 <br>
 
@@ -74,4 +76,4 @@ fn3. The code is taken from the "Flask site":http://flask.pocoo.org/.
 
 fn4. You will need to have Python and Pip installed.
 
-fn4. This is also the approach of PaaS services such as Heroku.
+fn5. This is also the approach of PaaS services such as Heroku.
