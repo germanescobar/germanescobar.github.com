@@ -1,0 +1,67 @@
+---
+layout: post
+title: Scalable web applications
+---
+
+h1. Scalable web applications
+
+bq. A scalable web application can handle growth - of users or work - without requiring changes to the source code.
+
+The following are some _guidelines_ that I've gathered for designing *scalable web applications* regardless of the programming language that you use. They have proven useful to lots of companies including "Twitter":http://twitter.com, "Github":http://github.com and "LinkedIn":http://linkedin.com just to name a few. Although it is not an exhaustive list, I hope you find them interesting and valuable ;)
+
+h2. Keep the architecture simple
+
+Divide your application into *smaller applications (modules) that "share nothing":http://en.wikipedia.org/wiki/Shared_nothing_architecture*. Treat everything else as an _external service_. For example, the following image shows a *web module*, a *worker module* and some shared _external services_.
+
+<p style="text-align:center">!/assets/images/posts/architecture.png!</p>
+
+The *web module* handles _HTTP requests_ while the *worker module* executes _background jobs_ (e.g. gathering statistics, generating reports, etc.). It's a simple but powerful way of thinking about your application. Each module is completely independent of each other. They could even be written in different languages!
+
+Modules use _external services_ to communicate with each other (e.g. a database, a message queue, etc.). "This interesting post":https://github.com/blog/542-introducing-resque, for example, shows how "Github":http://www.github.com/ uses an _external service_ called "Resque":https://github.com/defunkt/resque to trigger and execute background jobs. 
+
+*Each module is executed as one or more processes --in one or more servers*. For instance, you could have two running processes of your *web module* and four running processes of your *worker module* as shown in the image below. Although not shown, each process could be running on a different server. We will talk about the _clock process_ in the following section.
+
+<p style="text-align:center">!/assets/images/posts/heroku-processes.jpeg!</p>
+
+If you want to learn more about how modern web applications are designed and built, I recommend you check out "this site":http://www.12factor.net/ from which I took the image above. The only oddity is that they use the expression *process type* for what I refer here as a *module*[1].  
+
+
+h2. Scheduling
+
+If your application needs to support task scheduling there are two approaches that you can use. The first is to use a cloud service such as "Heroku Scheduler":https://addons.heroku.com/scheduler, "IronWorker":http://www.iron.io/worker or similar. The other is to create your own scheduling solution <notextile>--or use an existing one--</notextile> and execute it in a single process. 
+
+If you go with the second approach, try not to execute the tasks in the same scheduler process; instead, use the worker processes for that. The scheduler process should be responsible of triggering the tasks, not executing them.
+
+h2. The file system and memory space
+
+Never use the _file system_ or the _memory space_ of a process to save data that needs to be persisted longer than a single transaction/request.
+
+The following should be obvious but it is worth saying: if you save a file in the process' _file system_, it won't be visible to other processes (on different servers). Use a service such as "Amazon S3":http://aws.amazon.com/s3/ or a shared file system instead. 
+
+The same applies to the _memory space_. For example, if a module writes a variable (e.g. a primitive value, a collection, an object, etc.) and there are multiple processes of that module running, each process will have it's own value of the variable. Use "Redis":http://redis.io/, "Memcached":http://memcached.org/ or a similar _external service_ instead if you need to share the value of the variable.
+
+You can still use the _file system_ and the _memory space_ for operations that span a single transaction or request, and for files and variables that don't need to be persisted or shared.
+
+h2. Beware of libraries and frameworks
+
+Some libraries and frameworks will use the process' _file system_ or the _memory space_ to write data that should be persisted and shared among processes.
+
+For example, most web frameworks, by default, store *session data*[2] in the process' _memory space_. This is ok if there's only one process running. However, with multiple processes, and depending of what you store in the session, the application could start behaving erronously[3].
+
+Another example is a library that uses the _memory space_ to cache some expensive calculation. That cache won't be so useful because each process will have to do the calculation anyway[4]. 
+
+As you can see, the consequences can range from a loss in performance to a misbehaving application. Few libraries explicitly document this so most of the time you'll just have to guess.
+
+h2. Conclusion
+
+A simple architecture and some additional considerations is all you need to build a scalable web application. Sure, your _external services_ need to scale as well. But having a scalable architecture will allow you iterate and focus on one problem at a time. Nothing worst than having to redesign the whole architecture during a growth burst.
+
+<br>
+
+fn1. It is easier to think about the _web module_ than the _web process type_ when building your project.
+
+fn2. This is a place used to store transient information about user that is currently using your application.
+
+fn3. The solution, in this case, is to use a different session storage mechanism such as "Redis":http://redis.io/ or "Memcached":http://memcached.org/ (most web frameworks support this feature).
+
+fn4. The solution is to write that value to and _external service_ such as "Redis":http://redis.io/ or "Memcached":http://memcached.org/.
