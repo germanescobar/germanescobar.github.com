@@ -5,13 +5,13 @@ title: Una pasión creativa, no un empleo
 
 # Una pasión creativa, no un empleo
 
-Desde niños nos preparan para buscar un empleo. Nuestros padres pagan una sobrevalorada educación formal para que nos inyecten una cantidad de información que poco o nada nos va a servir en el futuro. Aprender no es lo importante, es el título  lo que nos garantiza un sueldo y el ingreso a la jornada laboral.
+Desde niños nos preparan para buscar un empleo. Nuestros padres pagan una sobrevalorada educación formal para que nos inyecten una cantidad de información que poco o nada nos va a servir en el futuro. Aprender no es lo importante, es el título  lo que nos garantiza un sueldo y el ingreso a la vida laboral.
 
 ![Parte de un cuadro que pintó Gabriela](/assets/images/posts/gabriela-art.jpg)
 
 Gabriela tiene dos años. En este momento su capacidad creativa es infinita. 
 
-Pero cuando entre al colegio le dirán qué debe aprender y qué tareas hacer. Le harán pruebas para verificar que haya aprendido lo que le dijeron que aprendiera. Así sabrá cómo seguir instrucciones cuando logre encontrar un empleo (si es que lo logra). 
+Pero cuando entre al colegio le dirán qué debe aprender y qué tareas hacer. Le harán pruebas para verificar que haya aprendido lo que le dijeron que aprendiera. Así sabrá cómo seguir instrucciones cuando encuentre un empleo (si es que lo encuentra). 
 
 Sí, los colegios matan la creatividad. Y no, no quiero que Gabriela encuentre un empleo. Al contrario, espero que nunca tenga que buscar uno.
 
