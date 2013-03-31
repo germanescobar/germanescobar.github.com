@@ -165,6 +165,7 @@ section.index a:hover {
 }
 
 .post img {
+	width: 96%;
 	margin: 15px auto;
 	padding:7px;
 	border:1px solid #ccc;
