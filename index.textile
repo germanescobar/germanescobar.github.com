@@ -52,8 +52,9 @@ title: Germán Escobar
 </section>
 
 <section class="index">
-	<header>Estilo de Vida</header>
+	<header>Educación y Estilo de Vida</header>
 	<ul>
+		<li><a href="/2013/03/30/una-pasion-creativa-no-un-empleo/">Una pasión creativa, no un empleo</a><span class="date">30 Mar 2013</span></a></li>
 		<li><a href="/2013/02/07/ninos-y-ipads/">Niños y iPads</a><span class="date">07 Feb 2013</span></a></li>
 		<li><a href="/2012/08/03/una-nueva-propuesta-educativa/">Una nueva propuesta educativa</a><span class="date">03 Aug 2012</span></a></li>
 		<li><a href="/2012/07/18/capsela">Capsela</a><span class="date">18 Jul 2012</span></li>
