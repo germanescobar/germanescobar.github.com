@@ -7,6 +7,7 @@ title: Germán Escobar
 <section class="index">
 	<header>Programming</header>
 		<ul>
+		<li><a href="/2013/05/02/the-new-architecture-elibom/">The new architecture of elibom.com</a><span class="date">02 May 2013</span></li>
 		<li><a href="/2013/01/19/scalable-web-applications/">Scalable web applications</a><span class="date">19 Jan 2013</span></li>
 		<li><a href="/2013/01/10/moving-away-from-java-ee/">Moving away from Java EE</a><span class="date">10 Jan 2013</span></li>
 		<li><a href="/2012/12/23/git-workflow-at-elibom/">The Git Workflow at Elibom</a><span class="date">23 Dic 2012</span></li>
