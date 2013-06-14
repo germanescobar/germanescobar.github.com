@@ -86,7 +86,7 @@ div.footnotes p {
 	margin-bottom: 5px;
 }
 
-blockquote p {
+blockquote, blockquote p {
 	font-size: 16px;
 }
 
