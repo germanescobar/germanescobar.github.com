@@ -55,6 +55,7 @@ title: Germán Escobar
 <section class="index">
 	<header>Educación y Estilo de Vida</header>
 	<ul>
+		<li><a href="/2013/06/27/la-transformacion-de-la-educacion/">La transformación de la educación</a><span class="date">27 Jun 2013</span></a></li>
 		<li><a href="/2013/06/13/el-efecto-del-colegio-en-la-creatividad/">El efecto del colegio en la creatividad</a><span class="date">13 Jun 2013</span></a></li>
 		<li><a href="/2013/03/30/una-pasion-creativa-no-un-empleo/">Una pasión creativa, no un empleo</a><span class="date">30 Mar 2013</span></a></li>
 		<li><a href="/2013/02/07/ninos-y-ipads/">Niños y iPads</a><span class="date">07 Feb 2013</span></a></li>
