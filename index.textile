@@ -45,6 +45,7 @@ title: Germán Escobar
 <section class="index">
 	<header>Emprendimiento</header>
 	<ul>
+		<li><a href="/2013/08/03/diez-anios-elibom">Diez años de elibom.com</a><span class="date">03 Ago 2013</span></li>
 		<li><a href="/2012/05/07/la-idea-para-su-proxima-startup">La Idea de su Próxima Startup</a><span class="date">07 May 2012</span></li>
 		<li><a href="/2012/05/05/el-silicon-valley-dream">El Silicon Valley Dream</a><span class="date">05 May 2012</span></li>
 		<li><a href="http://gaesva.blogspot.com/2011/02/la-ventaja-de-ser-programador.html">La Ventaja de Ser Programador</a><span class="date">23 Feb 2011</span></li>
