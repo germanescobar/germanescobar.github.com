@@ -45,6 +45,7 @@ title: Germán Escobar
 <section class="index">
 	<header>Emprendimiento</header>
 	<ul>
+		<li><a href="/2014/01/29/aprende-a-programar-y-crea-empresa">Aprende a programar y crea empresa</a><span class="date">29 Ene 2014</span></li>
 		<li><a href="/2013/08/03/diez-anios-elibom">Diez años de elibom.com</a><span class="date">03 Ago 2013</span></li>
 		<li><a href="/2012/05/07/la-idea-para-su-proxima-startup">La Idea de su Próxima Startup</a><span class="date">07 May 2012</span></li>
 		<li><a href="/2012/05/05/el-silicon-valley-dream">El Silicon Valley Dream</a><span class="date">05 May 2012</span></li>
