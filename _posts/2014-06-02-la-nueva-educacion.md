@@ -9,7 +9,7 @@ Quiero contarles sobre dos días que definieron el resto de mi vida cuando estab
 
 El primer día fue un sábado. Eran las 7 am. Tenía 13 años y mi papá me inscribió en un curso de programación -para aprender un lenguaje llamado FoxPro-. Recuerdo el olor del viejo tapete sobre la madera, la distribución del salón, el color amarillento de los computadores y la ventana de marco cuadriculado con vidrios de diferentes texturas que permitían algo de visibilidad a la caracas, una pintoresca avenida de Bogotá. No he dejado de programar desde entonces, y espero nunca dejar de hacerlo.
 
-El segundo día fue un martes -¿o un jueves?-. Me hice el enfermo y no asistí al colegio. Pero empecé a leer el libro de física que estábamos usando ese año. Me acuerdo perfectamente del tema: planos y fuerzas. El momento de descubrimiento fue al día siguiente cuando todos mis compañeros se esforzaban por entender el tema que el profesor había intentado explicar el día anterior! No lo podía creer: toda la información estaba en el libro.
+El segundo día fue un martes -¿o un jueves?-. Me hice el enfermo y no asistí al colegio. Pero empecé a leer el libro de física que estábamos usando ese año. Me acuerdo perfectamente del tema: planos y fuerzas. El momento de descubrimiento fue al día siguiente cuando todos mis compañeros se esforzaban por entender el tema que el profesor había intentado explicar el día anterior! No he dejado de auto-aprender desde entonces, y espero nunca dejar de hacerlo.
 
 Sí, los dos días que marcaron mi vida cuando estaba en el colegio fueron dos días en los que no estaba en el colegio.
 
