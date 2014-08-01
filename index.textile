@@ -37,8 +37,8 @@ title: Germán Escobar
 <section class="index">
 	<header>Companies / Empresas</header>
 	<ul>
-		<li><a href="http://www.elibom.com/">elibom.com</a>: co-founder</li>
-		<li><a href="http://www.infinanza.com/">infinanza.com</a>: still an experiment</li>
+		<li><a href="http://www.elibom.com/">Elibom</a>: co-founder</li>
+		<li><a href="http://makeitreal.camp/">Make it Real</a>: my little baby!</li>
 	</ul>
 </section>
 
@@ -57,6 +57,7 @@ title: Germán Escobar
 <section class="index">
 	<header>Educación y Estilo de Vida</header>
 	<ul>
+		<li><a href="/2014/08/01/no-lo-dejes-de-intentar/">¡No lo dejes de intentar!</a><span class="date">01 Ago 2014</span></a></li>
 		<li><a href="/2014/06/02/la-nueva-educacion/">La nueva educación</a><span class="date">02 Jun 2014</span></a></li>
 		<li><a href="/2013/06/27/la-transformacion-de-la-educacion/">La transformación de la educación</a><span class="date">27 Jun 2013</span></a></li>
 		<li><a href="/2013/06/13/el-efecto-del-colegio-en-la-creatividad/">El efecto del colegio en la creatividad</a><span class="date">13 Jun 2013</span></a></li>
