@@ -57,6 +57,7 @@ title: Germán Escobar
 <section class="index">
 	<header>Educación y Estilo de Vida</header>
 	<ul>
+		<li><a href="/2014/08/07/hija-esta-es-tu-vida/">Hija, esta es tu vida</a><span class="date">07 Ago 2014</span></a></li>
 		<li><a href="/2014/08/01/no-lo-dejes-de-intentar/">¡No lo dejes de intentar!</a><span class="date">01 Ago 2014</span></a></li>
 		<li><a href="/2014/06/02/la-nueva-educacion/">La nueva educación</a><span class="date">02 Jun 2014</span></a></li>
 		<li><a href="/2013/06/27/la-transformacion-de-la-educacion/">La transformación de la educación</a><span class="date">27 Jun 2013</span></a></li>
