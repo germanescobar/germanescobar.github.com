@@ -57,6 +57,7 @@ title: Germán Escobar
 <section class="index">
 	<header>Educación y Estilo de Vida</header>
 	<ul>
+		<li><a href="/2014/08/10/los-programadores-que-la-industria-necesita-no-vendran-de-las-universidades/">No, los programadores que la industria necesita no vendrán de las universidades</a><span class="date">10 Ago 2014</span></a></li>
 		<li><a href="/2014/08/07/hija-esta-es-tu-vida/">Hija, esta es tu vida</a><span class="date">07 Ago 2014</span></a></li>
 		<li><a href="/2014/08/01/no-lo-dejes-de-intentar/">¡No lo dejes de intentar!</a><span class="date">01 Ago 2014</span></a></li>
 		<li><a href="/2014/06/02/la-nueva-educacion/">La nueva educación</a><span class="date">02 Jun 2014</span></a></li>
